@@ -6,11 +6,18 @@ Let's break this down into simple, bite-sized pieces so you can write code like 
 
 ## What is Time Complexity?
 
-Imagine you are trying to find the word "Algorithm" in a thick, physical dictionary. 
-- **Method 1 (The slow way):** You check every single page from page 1 until you find it. 
-- **Method 2 (The smart way):** You open the book in the middle, see if "A" comes before or after, and keep halving the search space until you find it.
+Imagine I am thinking of a number between 1 and 100. After every guess, I will tell you if my number is "Higher" or "Lower."
 
-If the dictionary suddenly doubles in size, Method 1 takes twice as long, but Method 2 only takes *one extra step*! 
+- **The Slow Way:** You guess 1. Higher. You guess 2. Higher. You guess 3... If my number is 99, it takes you 99 guesses.
+- **The Smart Way:** You start right in the middle and guess 50. I say Higher. Instantly, you just eliminated half the numbers (1 through 50). Next, you guess 75. I say Lower. You eliminated another huge chunk. You keep guessing the exact middle of whatever is left.
+
+**The "Aha!" Moment:**
+What if we make the game twice as hard and play from 1 to 200?
+
+- The **Slow Way** might now take up to 200 guesses. The workload completely doubled.
+- The **Smart Way**? Your very first guess is 100. Whether I say Higher or Lower, you instantly cross out 100 numbers. After just that one guess, you are right back to playing a normal 1-to-100 game!
+
+When you double the amount of numbers, the slow way takes twice as long, but the smart way only requires *one extra guess*. 
 
 **Time Complexity** is simply a way to describe **how the runtime of your algorithm grows as the size of the input grows.** We use it to figure out if our code will survive when given a massive amount of data.
 
