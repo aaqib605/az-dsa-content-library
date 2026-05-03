@@ -30,11 +30,16 @@ for(int i = 0; i < n; i++) {
 
 *But what if the inner loop doesn't go all the way up to $N$?*
 ```cpp
-for(int i = 0; i < n; i++) {
-    for(int j = 0; j < i; j++) {
-        // Runs 0 + 1 + 2 + ... + (N-1) times
-        cout << "*";
+int seriesLoop(int n) {
+    int count = 0;
+
+    for (int i = n; i >= 1; i /= 2) {
+        for (int j = 0; j < i; j++) {
+            count++;
+        }
     }
+    
+    return count;
 }
 ```
 This is an arithmetic progression summing to about $N^2/2$. We drop the constant (divide by 2), so it is still **$O(N^2)$**.
