@@ -30,10 +30,6 @@ Imagine you are writing software for the brakes on a self-driving car. You would
 
 In software engineering, we plan for the worst. If our worst-case scenario is fast enough, we know our program will never crash or freeze under pressure.
 
-> 💡 **Interview Insight:** When an interviewer asks, *"What is the time complexity of your code?"*, they almost **always** mean the Worst-Case Big O notation, unless they specifically ask for the average or best case.
-
-**Disclaimer for the math geeks:** Strictly speaking, Big O mathematically represents the **upper bound** of a function, not just the "worst-case scenario". You can technically calculate the Big O upper bound of a best-case scenario! However, in the tech industry and interviews, "Big O" has become universally accepted jargon for "worst-case time complexity."
-
 ![alt text](Images/image-2.png)
 
 <!-- > **[IMAGE PLACEHOLDER]**
@@ -48,31 +44,38 @@ One of the most important rules of Big O notation is that **we ignore constants 
 
 Let's look at an example:
 ```cpp
-void printThings(int arr[], int n) {
-    // Loop 1 runs N times
+void processData(vector<int>& arr) {
+    int n = arr.size();
+
+    // Step 1: Quadratic work
     for(int i = 0; i < n; i++) {
-        cout << arr[i] << " ";
+        for(int j = 0; j < n; j++) {
+            cout << "Heavy processing...\n";
+        }
     }
-    
-    // Loop 2 also runs N times
+
+    // Step 2: Linear work
     for(int i = 0; i < n; i++) {
-        cout << arr[i] << " ";
+        cout << "Light cleanup...\n";
     }
 }
 ```
 
-If we count the operations, this takes $N + N = 2N$ steps. So, is the time complexity $O(2N)$? 
+If we count the exact operations here, Step 1 does $N^2$ operations. Step 2 does $N$ operations. So, the total time equation is $T(N) = N^2 + N$.
 
-**No! It is just $O(N)$.** 
+A common beginner mistake is to say this algorithm is $O(N^2 + N)$. But in Big-O, we only keep the dominant term. Why? Let's do the math.
 
-Why? Because Big O only cares about the *shape* of the growth curve as $N$ gets closer to infinity. Whether you do 1 operation per item or 100 operations per item, the time still grows *linearly*. Furthermore, a fast computer running a $2N$ algorithm might still beat a slow computer running an $N$ algorithm, so we drop the constant to keep things hardware-independent.
+If $N$ is small, say 10, then $N^2$ is 100, and $N$ is 10. The total operations are 110. Here, that extra $N$ represents about 9% of the total work.
 
-### What about non-dominant terms?
-Imagine an algorithm that takes $N^2 + N$ steps.
-- If $N = 10$, then $N^2 = 100$ and $N = 10$. Total = 110.
-- If $N = 100,000$, then $N^2 = 10,000,000,000$ and $N = 100,000$. 
+But Big-O is about how the algorithm scales towards infinity. What if $N$ is 10,000?
+- $N^2$ becomes 100,000,000.
+- $N$ is just 10,000.
 
-As $N$ grows, the $N^2$ part becomes so massive that the extra $N$ is basically a rounding error. Therefore, we **drop the smaller terms** and say the complexity is just **$O(N^2)$**.
+The total is 100,010,000. At this scale, the linear $N$ loop contributes to less than 0.01% of the total execution time. It is a drop in the ocean. The $N^2$ term completely dominates the CPU's processing time.
+
+Think of it like buying a million-dollar mansion. If you buy a five-dollar coffee on the same day, you don't say you spent one million and five dollars. The coffee is financially irrelevant compared to the house.
+
+So, in Big-O Notation, we drop the $N$ and simply call this an **$O(N^2)$** algorithm. The same goes for constants. If you have two separate loops that run $N$ times, that's $2N$ operations. But we drop the constant multiplier and just call it **$O(N)$**.
 
 > **Key Takeaway:** Always strip the complexity down to its most dominant, fastest-growing term. 
 > - $O(500N) \rightarrow O(N)$
