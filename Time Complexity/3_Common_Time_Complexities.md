@@ -13,14 +13,6 @@ int getFirstElement(int arr[]) {
 }
 ```
 
-### 🌟 Special Mention: Amortized Time Complexity
-Sometimes, an operation might take $O(N)$ time once in a while, but $O(1)$ time in almost all other cases. When we average out the heavy operation over a sequence of many operations, the cost becomes constant. We call this **Amortized $O(1)$**.
-
-- **Classic Example:** `std::vector::push_back()` in C++. 
-When you push elements into a vector, it takes $O(1)$ time. But when the vector runs out of underlying memory, it creates a new array double the size and copies all $N$ elements over ($O(N)$ time). However, because this doubling happens so rarely, the *average* cost of a single push is mathematically proven to be $O(1)$. 
-
-> 💡 **Interview Insight:** Interviewers love asking, *"What is the time complexity of pushing to a dynamic array?"* If you just say $O(1)$, they might penalize you. The golden answer is: *"It is $O(1)$ **amortized**, but $O(N)$ in the worst-case when the array resizes."*
-
 ## 2. $O(\log N)$ - Logarithmic Time (Extremely Fast)
 If $N$ doubles, the number of operations only increases by 1! This usually happens when you divide the search space in half each step.
 - **Example:** Binary Search. 
