@@ -38,7 +38,7 @@ int seriesLoop(int n) {
             count++;
         }
     }
-    
+
     return count;
 }
 ```
@@ -102,10 +102,6 @@ Each call spawns *two* more calls. The number of calls doubles at each level of 
 **Time Complexity:** $O(2^N)$
 
 ![alt text](Images/image-4.png)
-
-<!-- > **[IMAGE PLACEHOLDER]**
-> **Image Content:** A visual diagram of a recursion tree for `fibonacci(4)`. It should show the root node splitting into two nodes, which split into two more nodes, visually demonstrating how the tree "explodes" in width, beautifully representing $O(2^N)$ exponential growth.
-> **Location:** Insert here, to clarify branching recursion. -->
 
 ### Introducing the Master Theorem
 When dealing with **Divide and Conquer** algorithms (where a problem is divided into smaller subproblems), counting the recursion depth manually can get complicated. This is where the **Master Theorem** comes in handy!

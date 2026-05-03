@@ -32,10 +32,6 @@ In software engineering, we plan for the worst. If our worst-case scenario is fa
 
 ![alt text](Images/image-2.png)
 
-<!-- > **[IMAGE PLACEHOLDER]**
-> **Image Content:** A funny comic strip. Panel 1: A programmer saying "My code works perfectly in the best case!" (showing a sunny day). Panel 2: The code is deployed to real users, representing the worst case, and everything is on fire. 
-> **Location:** Insert here, to add some humor about planning for the worst case. -->
-
 ---
 
 ## Rule of Thumb: Drop the Constants!

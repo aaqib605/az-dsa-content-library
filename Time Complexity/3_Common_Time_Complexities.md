@@ -62,7 +62,3 @@ The absolute slowest. If $N=10$, it's 3.6 million operations. If $N=12$, it's 47
 - **Example:** Finding all permutations of a string.
 
 ![alt text](Images/image-3.png)
-
-<!-- > **[IMAGE PLACEHOLDER]**
-> **Image Content:** A "Big O Cheat Sheet" graph plotting all these complexities on one chart. The X-axis is 'Elements', Y-axis is 'Operations'. $O(1)$ and $O(\log N)$ should be in a green "Excellent" zone at the bottom. $O(N)$ and $O(N \log N)$ in a yellow "Fair" zone. $O(N^2)$, $O(2^N)$, and $O(N!)$ shooting aggressively up into a red "Horrible" zone.
-> **Location:** Insert here, at the end of the section as a visual summary. -->

@@ -55,10 +55,6 @@ Because these factors constantly change, measuring "seconds" is an unreliable wa
 
 ![alt text](Images/image-0.png)
 
-<!-- > **[IMAGE PLACEHOLDER]**
-> **Image Content:** An illustration showing a stopwatch crossed out (representing actual runtime) next to a magnifying glass hovering over a block of code counting operations like `+`, `=`, and `<` (representing time complexity). This visually reinforces that we count operations, not seconds.
-> **Location:** Insert here, right after the comparison explanation. -->
-
 ---
 
 ## Input Size and Its Impact on Performance
@@ -101,10 +97,6 @@ void printAllPairs(int arr[], int n) {
 This is where things get dangerous. As $N$ gets large, nested loops can cause your program to freeze or hit a "Time Limit Exceeded" (TLE) error on coding platforms.
 
 ![alt text](Images/image-1.png)
-
-<!-- > **[IMAGE PLACEHOLDER]**
-> **Image Content:** A colorful, friendly line graph plotting Input Size ($N$) on the X-axis and Time/Operations on the Y-axis. It should show three distinct lines: a flat green line at the bottom (Constant), a straight diagonal yellow line (Linear), and a steep curving red line (Quadratic), demonstrating how aggressively the red line shoots up as $N$ grows.
-> **Location:** Insert here, at the end of the section. -->
 
 ---
 
