@@ -1,3 +1,16 @@
+---
+title: "Complete Guide to Time Complexity in Problem Solving"
+slug: "time-complexity-in-problem-solving"
+track: "beginner-dsa"
+level: "Beginner"
+order: 4
+status: "Draft"
+duration: "45 min"
+videoStatus: "Published"
+updatedAt: "2026-05-07"
+description: "Learn how to use constraints, operation estimates, and the 10^8 rule to choose solutions that pass time limits."
+---
+
 # Complete Guide to Time Complexity in Problem Solving
 
 Time complexity is not just something you calculate after writing code. It helps you choose the right approach before you begin, avoid Time Limit Exceeded errors, and understand what kind of solution the problem constraints are pointing toward.

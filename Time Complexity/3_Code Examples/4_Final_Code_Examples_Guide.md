@@ -1,3 +1,16 @@
+---
+title: "Time Complexity Code Examples"
+slug: "time-complexity-code-examples"
+track: "beginner-dsa"
+level: "Beginner"
+order: 3
+status: "Draft"
+duration: "45 min"
+videoStatus: "Published"
+updatedAt: "2026-05-07"
+description: "Practice recognizing common time complexity patterns through loops, recursion, sorting, and mixed code examples."
+---
+
 # Time Complexity Code Examples
 
 Time complexity becomes much easier to understand when you connect each Big O pattern with real code. In this lesson, we will look at the most common complexities, learn how to analyze code step by step, and practice with examples you are likely to see in interviews and problem solving.

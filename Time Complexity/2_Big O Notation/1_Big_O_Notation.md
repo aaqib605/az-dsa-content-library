@@ -1,3 +1,16 @@
+---
+title: "Big O Notation"
+slug: "big-o-notation"
+track: "beginner-dsa"
+level: "Beginner"
+order: 2
+status: "Draft"
+duration: "45 min"
+videoStatus: "Published"
+updatedAt: "2026-05-07"
+description: "Understand Big O notation, worst-case analysis, and how to simplify algorithm complexity by focusing on dominant terms."
+---
+
 # Big O Notation
 
 You've probably heard programmers say things like, _"Oh, that solution is Big O of N."_ It sounds like scary math, but it's actually just a shorthand way to talk about time complexity!

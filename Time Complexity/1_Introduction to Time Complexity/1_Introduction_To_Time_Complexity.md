@@ -1,3 +1,16 @@
+---
+title: "Introduction to Time Complexity"
+slug: "introduction-to-time-complexity"
+track: "beginner-dsa"
+level: "Beginner"
+order: 1
+status: "Draft"
+duration: "45 min"
+videoStatus: "Published"
+updatedAt: "2026-05-07"
+description: "Learn what time complexity means, why it matters in DSA, and how input size affects algorithm performance."
+---
+
 # Introduction to Time Complexity
 
 Hey there! Welcome to the world of Data Structures and Algorithms (DSA). If you've ever written a program and wondered, _"Is this the best way to do it?"_ or _"Will this run fast enough?"_, you are already thinking about **Time Complexity**.

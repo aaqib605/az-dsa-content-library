@@ -1,3 +1,16 @@
+---
+title: "Time Complexity vs. Space Complexity"
+slug: "time-vs-space-complexity"
+track: "beginner-dsa"
+level: "Beginner"
+order: 5
+status: "Draft"
+duration: "45 min"
+videoStatus: "Published"
+updatedAt: "2026-05-07"
+description: "Compare time complexity and space complexity, and learn how to reason about speed, memory, and trade-offs."
+---
+
 # Time Complexity vs. Space Complexity
 
 Throughout this guide, we've been obsessed with **Time Complexity**—how _fast_ an algorithm runs. But that is only half of the story in Data Structures and Algorithms. The other half is **Space Complexity**.
