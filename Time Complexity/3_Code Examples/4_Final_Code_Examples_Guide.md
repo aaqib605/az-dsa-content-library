@@ -415,4 +415,4 @@ void mixedExample(vector<int>& arr, int m) {
 
 ## Video Explanation
 
-[![Introduction to Time Complexity](Images/video-lecture-thumbnail.jpg)](https://drive.google.com/file/d/1pS1WLIg7B8aa4TPhNiu_LeKTFX-DdODc/view?usp=sharing)
+[![Introduction to Time Complexity](../Images/video-lecture-thumbnail.jpg)](https://drive.google.com/file/d/1pS1WLIg7B8aa4TPhNiu_LeKTFX-DdODc/view?usp=sharing)

@@ -127,4 +127,4 @@ By understanding how input size affects your code, you're taking your first big 
 
 ## Video Explanation
 
-[![Introduction to Time Complexity](Images/video-lecture-thumbnail.jpg)](https://drive.google.com/file/d/1TEwGSfNhR--cPQUfPQ1zbkXnihvETu-j/view?usp=sharing)
+[![Introduction to Time Complexity](../Images/video-lecture-thumbnail.jpg)](https://drive.google.com/file/d/1TEwGSfNhR--cPQUfPQ1zbkXnihvETu-j/view?usp=sharing)

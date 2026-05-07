@@ -70,4 +70,4 @@ In competitive programming and interviews, you are often faced with a **Time-Spa
 
 ## Video Explanation
 
-[![Introduction to Time Complexity](Images/video-lecture-thumbnail.jpg)](https://drive.google.com/file/d/181UJxokpFh4UukYYIUdHoTfQ6ZqnMNh0/view?usp=sharing)
+[![Introduction to Time Complexity](../Images/video-lecture-thumbnail.jpg)](https://drive.google.com/file/d/181UJxokpFh4UukYYIUdHoTfQ6ZqnMNh0/view?usp=sharing)

@@ -105,4 +105,4 @@ If a problem has $N = 10^5$ and a 1-second time limit, a pure $O(N)$ solution ta
 
 ## Video Explanation
 
-[![Introduction to Time Complexity](Images/video-lecture-thumbnail.jpg)](https://drive.google.com/file/d/19O3gCYwpcRPDIooYc_Lf_AIA-_A4M1sI/view?usp=sharing)
+[![Introduction to Time Complexity](../Images/video-lecture-thumbnail.jpg)](https://drive.google.com/file/d/19O3gCYwpcRPDIooYc_Lf_AIA-_A4M1sI/view?usp=sharing)

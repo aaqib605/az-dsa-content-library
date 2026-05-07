@@ -144,4 +144,4 @@ This means you don't need to multiply $T \times N$ for the worst case. The total
 
 ## Video Explanation
 
-[![Introduction to Time Complexity](Images/video-lecture-thumbnail.jpg)](https://drive.google.com/file/d/1oOfVTnkoEzjPv1x2kg2QlGW2QZScbJGc/view?usp=sharing)
+[![Introduction to Time Complexity](../Images/video-lecture-thumbnail.jpg)](https://drive.google.com/file/d/1oOfVTnkoEzjPv1x2kg2QlGW2QZScbJGc/view?usp=sharing)
