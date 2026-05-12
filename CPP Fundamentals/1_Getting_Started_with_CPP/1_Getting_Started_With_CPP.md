@@ -128,10 +128,3 @@ Online Judges are incredibly strict. If the expected output is `Yes`, and you pr
 ## Video Explanation
 
 [![Getting Started with C++](../Images/video-lecture-thumbnail.jpg)]()
-
-Necessary Content to cover in the video:
-
-- Setting up the basic C++ boilerplate template.
-- Understanding the purpose of `#include <bits/stdc++.h>` and `using namespace std;`.
-- Writing your first `main()` function and why it needs `return 0;`.
-- How an Online Judge evaluates your code step-by-step (Compilation, Execution, Evaluation).
