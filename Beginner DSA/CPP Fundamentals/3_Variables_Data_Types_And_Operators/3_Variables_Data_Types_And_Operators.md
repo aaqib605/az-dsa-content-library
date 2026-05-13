@@ -151,6 +151,9 @@ Try solving the following problems:
 - **[Digits Summation](https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/F)**
 - **[Two numbers](https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/H)**
 - **[The last 2 digits](https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/Y)**
+- **[Winter Sale](https://codeforces.com/group/MWSDmqGsZm/contest/326175/problem/A)**
+- **[Next Alphabet](https://codeforces.com/group/MWSDmqGsZm/contest/326175/problem/C)**
+- **[Data Type Guessing](https://codeforces.com/group/MWSDmqGsZm/contest/326175/problem/H)**
 
 ---
 
