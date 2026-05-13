@@ -52,6 +52,21 @@ for (int i = 5; i >= 1; i--) {
 
 ![A diagram showing the flow of a 'for' loop: Initialization -> Condition check -> Code execution -> Update -> Back to Condition](../Images/for_loop_flow.png)
 
+### The Range-Based `for` Loop (Sneak Peek)
+
+Introduced in C++11, this is a much cleaner way to iterate over a collection of items (like Arrays or Strings, which we will learn in upcoming modules!). 
+Instead of keeping track of an index `i` and setting up conditions, you just tell C++: *"For every item in this collection, do something."*
+
+```cpp
+// Iterating over a list of numbers directly
+for (int num : {10, 20, 30, 40}) {
+    cout << num << " ";
+}
+// Output: 10 20 30 40
+```
+
+This syntax is incredibly popular in Competitive Programming because it's shorter, prevents "off-by-one" index errors, and reads exactly like plain English!
+
 ---
 
 ## 2. The `while` Loop
