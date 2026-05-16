@@ -69,27 +69,7 @@ int main() {
 
 ---
 
-## 3. The Magic of `pair` Sorting
-
-While sorting single numbers is foundational, sorting a `vector<pair<int, int>>` is arguably the most common use case you'll see in contests (e.g., sorting intervals, or keeping track of an element's original index after sorting).
-
-The beauty of C++ is that `sort()` automatically knows how to handle pairs:
-1. It sorts based on the **first** element of the pair.
-2. If the first elements are exactly equal, it gracefully falls back and sorts based on the **second** element!
-
-```cpp
-vector<pair<int, int>> v = {{5, 2}, {1, 9}, {5, 1}};
-sort(v.begin(), v.end());
-
-// v is now: {{1, 9}, {5, 1}, {5, 2}}
-// Notice how the two pairs starting with 5 were sorted by their second elements!
-```
-
-This automatic behavior usually saves you from having to write a custom comparator!
-
----
-
-## 4. Descending Order
+## 3. Descending Order
 
 By default, `sort()` organizes elements in **Ascending Order** (smallest to largest). What if we want the largest elements first?
 
@@ -115,7 +95,7 @@ sort(v.rbegin(), v.rend());
 
 ---
 
-## 5. Custom Comparators (The Ultimate Power)
+## 4. Custom Comparators (The Ultimate Power)
 
 What if you want to sort something complex? For example, sorting a list of students by their *marks*, but if two students have the same marks, sort them by their *names* alphabetically?
 
@@ -164,7 +144,7 @@ sort(v.begin(), v.end(), [](int a, int b) {
 
 ---
 
-## 6. Stable Sort
+## 5. Stable Sort
 
 Imagine you sort a list of emails by their received date. Later, you sort that *same* list by the sender's name.
 If you use standard `sort()`, emails from the same sender might get jumbled out of their date order. 
