@@ -220,6 +220,23 @@ void printMatrix(int arr[][3], int rows) {
 
 ---
 
+## 9. Modern C++: `vector<vector<int>>`
+
+In modern C++, we almost *never* use raw 2D arrays, especially in competitive programming and DSA interviews. Instead, we use a **Vector of Vectors**.
+
+```cpp
+// Creates a 2D vector with 3 rows and 4 columns, initialized to 0
+vector<vector<int>> grid(3, vector<int>(4, 0));
+```
+
+Vectors of vectors solve all the annoying problems of static 2D arrays:
+1. They can resize dynamically (you can add a new row easily).
+2. You can pass them to functions cleanly: `void printMatrix(vector<vector<int>> grid)`.
+
+We will use `vector<vector<int>>` extensively as we dive deeper into advanced DSA!
+
+---
+
 ## Let's Practice!
 
 2D Array problems are excellent for practicing logic and nested loops. 
@@ -230,6 +247,12 @@ Try the following problems:
 - **[Matrix](https://maang.in/problems/Matrix-1144)**
 - **[8 Neighbors](https://maang.in/problems/8-Neighbors-1141)**
 - **[Mirror Array](https://maang.in/problems/Mirror-Array-1142)**
+- **[Transpose Matrix](https://leetcode.com/problems/transpose-matrix/description/)**
+- **[Convert 1D Array Into 2D Array](https://leetcode.com/problems/convert-1d-array-into-2d-array/description/)**
+- **[Island Perimeter](https://leetcode.com/problems/island-perimeter/description/)**
+- **[Valid Sudoku](https://leetcode.com/problems/valid-sudoku/description/)**
+- **[Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/description/)**
+- **[Find Winner on a Tic Tac Toe Game](https://leetcode.com/problems/find-winner-on-a-tic-tac-toe-game/description/)**
 
 ---
 
