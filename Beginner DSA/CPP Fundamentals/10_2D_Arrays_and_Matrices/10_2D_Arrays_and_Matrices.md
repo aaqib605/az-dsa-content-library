@@ -41,14 +41,14 @@ using namespace std;
 
 int main() {
     // Declares a grid with 3 rows and 4 columns
-    int arr[3][4]; 
+    int arr[3][4];
 
     // Assigning a value to the cell at Row 1, Column 2
     arr[1][2] = 99;
 
     // Accessing that value
     cout << "Value at (1, 2) is: " << arr[1][2] << "\n";
-    
+
     return 0;
 }
 ```
@@ -62,6 +62,7 @@ int main() {
 To interact with every cell in a 2D array, we use **Nested Loops**. The outer loop iterates through the rows, and the inner loop iterates through the columns.
 
 ### Taking Input
+
 ```cpp
 int n, m;
 cin >> n >> m; // Taking input of number of rows and number of cols
@@ -76,6 +77,7 @@ for (int i = 0; i < n; i++) {
 ```
 
 ### Printing Output (Row-wise Traversal)
+
 Printing row-by-row is the most common way to display a matrix. Notice the `cout << "\n"` after the inner loop finishes to ensure each row prints on a new line!
 
 ```cpp
@@ -111,6 +113,7 @@ for (int j = 0; j < m; j++) { // Outer loop is Columns!
 Because a matrix is just a collection of numbers, you can easily find properties like the sum or the extremes by traversing it.
 
 ### Sum of All Elements & Finding Extremes
+
 ```cpp
 int totalSum = 0;
 int maxVal = -1e9; // Start with a very small number
@@ -119,15 +122,21 @@ int minVal = 1e9;  // Start with a very large number
 for (int i = 0; i < n; i++) {
     for (int j = 0; j < m; j++) {
         totalSum += arr[i][j];
-        
-        if (arr[i][j] > maxVal) maxVal = arr[i][j];
-        if (arr[i][j] < minVal) minVal = arr[i][j];
+
+        if (arr[i][j] > maxVal) {
+            maxVal = arr[i][j];
+        }
+
+        if (arr[i][j] < minVal) {
+            minVal = arr[i][j];
+        }
     }
 }
 ```
 
 ### Row-wise and Column-wise Sum
-Sometimes you need the sum of *each individual row* or *column*.
+
+Sometimes you need the sum of _each individual row_ or _column_.
 
 ```cpp
 // Row-wise Sum
@@ -166,7 +175,7 @@ for (int i = 0; i < n; i++) {
 cout << "\nSecondary Diagonal: ";
 for (int i = 0; i < n; i++) {
     int j = n - 1 - i; // Deriving j from the formula i + j == n - 1
-    cout << arr[i][j] << " "; 
+    cout << arr[i][j] << " ";
 }
 // Output: 3 5 7
 ```
@@ -202,7 +211,7 @@ bool isValid(int i, int j, int n, int m) {
 
 ## 8. Passing 2D Arrays to Functions
 
-Passing a 2D static array to a function is a massive pain point for beginners. If you write `void printMatrix(int arr[][])`, your code **will not compile**. 
+Passing a 2D static array to a function is a massive pain point for beginners. If you write `void printMatrix(int arr[][])`, your code **will not compile**.
 
 C++ needs to know how to calculate the memory offsets to find the next row. Therefore, you **must specify the column size** in the function parameters!
 
@@ -222,7 +231,7 @@ void printMatrix(int arr[][3], int rows) {
 
 ## 9. Modern C++: `vector<vector<int>>`
 
-In modern C++, we almost *never* use raw 2D arrays, especially in competitive programming and DSA interviews. Instead, we use a **Vector of Vectors**.
+In modern C++, we almost _never_ use raw 2D arrays, especially in competitive programming and DSA interviews. Instead, we use a **Vector of Vectors**.
 
 ```cpp
 // Creates a 2D vector with 3 rows and 4 columns, initialized to 0
@@ -230,6 +239,7 @@ vector<vector<int>> grid(3, vector<int>(4, 0));
 ```
 
 Vectors of vectors solve all the annoying problems of static 2D arrays:
+
 1. They can resize dynamically (you can add a new row easily).
 2. You can pass them to functions cleanly: `void printMatrix(vector<vector<int>> grid)`.
 
@@ -239,7 +249,7 @@ We will use `vector<vector<int>>` extensively as we dive deeper into advanced DS
 
 ## Let's Practice!
 
-2D Array problems are excellent for practicing logic and nested loops. 
+2D Array problems are excellent for practicing logic and nested loops.
 
 Try the following problems:
 
