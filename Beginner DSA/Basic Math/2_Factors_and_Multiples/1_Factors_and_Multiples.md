@@ -1,6 +1,6 @@
 ---
-title: "Factors, Multiples, and Prime Numbers"
-slug: "factors-multiples-prime-numbers"
+title: "Factors and Multiples"
+slug: "factors-and-multiples"
 track: "beginner-dsa"
 level: "Beginner"
 order: 1
@@ -8,10 +8,10 @@ status: "Draft"
 duration: ""
 videoStatus: "Not Published"
 updatedAt: "2026-05-31"
-description: "Discover the properties of factors and multiples, how to optimize algorithms from O(N) to O(sqrt(N)), and the elegant secrets of prime numbers."
+description: "Discover the properties of factors and multiples, and learn how to optimize algorithms from O(N) to O(sqrt(N))."
 ---
 
-# Factors, Multiples, and Prime Numbers
+# Factors and Multiples
 
 Imagine you are a teacher with 24 students, and you want to arrange their desks into a perfect rectangular grid. There can be no empty gaps in the rows. 
 
@@ -121,34 +121,7 @@ Multiples are extremely straightforward. However, they are the foundation for a 
 
 ---
 
-## 4. Application: Checking for Prime Numbers
-
-Since we just learned the optimal way to find factors, we are perfectly equipped to check if a number is **prime**.
-
-By definition, a prime number is a number strictly greater than 1 that has **exactly two factors**: $1$ and itself. 
-
-How do we check if $N$ is prime? We don't even need to count all the factors. We just need to know if we can find *any* factor between $2$ and $\sqrt{N}$. If we find even a single one, the number is definitely not prime!
-
-```cpp
-// Time Complexity: O(sqrt(N)) in the worst case (if N is prime)
-// Best Case: O(1) if N is divisible by 2 immediately
-bool isPrime(int N) {
-    if (N <= 1) return false; // 0 and 1 are not prime
-    
-    for (int i = 2; i * i <= N; i++) {
-        if (N % i == 0) {
-            return false; // We found a factor! It's not prime.
-        }
-    }
-    return true; // No factors found between 2 and sqrt(N), it must be prime.
-}
-```
-
-> 💡 **CP Insight:** Notice how we start our loop at `2` and return `false` the exact moment we find a divisor. If $N$ is an even number like $1,000,000$, the loop runs exactly *once* and stops. This makes our prime checker blazingly fast in the average case!
-
----
-
-## 5. Edge Cases & "Gotchas"
+## 4. Edge Cases & "Gotchas"
 
 Even in a beautifully optimized $O(\sqrt{N})$ algorithm, there is a hidden trap that causes many candidates to fail.
 
@@ -184,7 +157,6 @@ Always stick to safe, extremely fast integer math: `i <= N / i`.
 
 Ready to put these insights to the test? Master these concepts by solving this curated progression of problems:
 
-- **[Prime Check AZ101](https://maang.in/problems/Prime-Check-AZ101-323)**
 - **[Number of Divisors AZ101](https://maang.in/problems/Number-of-Divisors-AZ101-322)**
 - **[Number of Common Factors](https://leetcode.com/problems/number-of-common-factors/)**
 - **[Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/)**
@@ -197,4 +169,4 @@ Ready to put these insights to the test? Master these concepts by solving this c
 
 ## Video Explanation
 
-[![Factors, Multiples, and Prime Numbers](../Images/video-lecture-thumbnail.jpg)]()
+[![Factors and Multiples](../Images/video-lecture-thumbnail.jpg)]()
