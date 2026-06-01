@@ -13,13 +13,13 @@ description: "Discover the mathematical link between GCD and LCM, learn how to u
 
 # GCD and LCM
 
-Imagine you are a master tiler. You have a rectangular floor that is $24$ meters by $15$ meters. You want to cover this entire floor using perfectly square tiles. To save time, you want to use the **largest possible square tiles**, and you refuse to cut any of them. What size tile do you use?
-You are looking for the **Greatest Common Divisor (GCD)**! In this case, a $3 \times 3$ tile perfectly divides both $24$ and $15$.
+Imagine you are hosting a party. You have $24$ slices of pizza and $15$ cans of soda. You want to create identical "party bags" containing both pizza and soda, using all your supplies with nothing left over. What is the maximum number of identical bags you can make? 
+You are looking for the **Greatest Common Divisor (GCD)**! The answer is $3$ bags (each containing $8$ slices and $5$ sodas).
 
-Now, imagine two planets revolving around a sun. Planet A takes $12$ years to complete an orbit. Planet B takes $18$ years. If they align today, how many years until they align perfectly again?
-You are looking for the **Lowest Common Multiple (LCM)**! They will align in $36$ years.
+Now, imagine you have a bus that arrives at your stop every $12$ minutes, and a train that arrives every $18$ minutes. If they both arrive right now, how long do you have to wait until they arrive at the exact same time again? 
+You are looking for the **Lowest Common Multiple (LCM)**! They will perfectly sync up in $36$ minutes.
 
-These two concepts—GCD and LCM—are two sides of the same mathematical coin. They govern cycles, alignments, and simplifications in computer science.
+These two concepts—GCD and LCM—are two sides of the same mathematical coin. While GCD helps us split things into the largest possible equal groups, LCM helps us find when repeating cycles finally align.
 
 ---
 
