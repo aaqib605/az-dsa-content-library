@@ -132,10 +132,6 @@ long long powerIterative(long long a, long long b) {
 }
 ```
 
-> 💡 **CP Trick:** You will often see competitive programmers write this exact loop using bitwise operators because it looks cleaner and can be marginally faster at the CPU level. 
-> - `b % 2 != 0` can be written as `b & 1` (checks if the last bit is 1, meaning it's odd).
-> - `b = b / 2` can be written as `b >>= 1` (shifts the bits right by 1, which perfectly divides by 2). We will learn about bitwise operators in detail in the Bit Manipulation module.
-
 ---
 
 ## 5. Edge Cases & "Gotchas"
