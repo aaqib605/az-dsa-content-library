@@ -5,9 +5,9 @@ track: "beginner-dsa"
 level: "Beginner"
 order: 1
 status: "Draft"
-duration: ""
-videoStatus: "Not Published"
-updatedAt: "2026-05-26"
+duration: "9 min 10 sec"
+videoStatus: "Published"
+updatedAt: "2026-06-04"
 description: "Master 2D pattern printing with the Canvas Approach. Learn to use coordinate geometry and simple boundaries."
 ---
 
@@ -27,8 +27,10 @@ Welcome to **The Canvas Approach**.
 
 ### The Paradigm Shift
 Instead of writing complex nested loops with shifting bounds, we will:
-1. **Define the Canvas:** Determine the exact grid dimensions (e.g., $N \times M$). Write two simple, fixed loops to iterate through every coordinate $(i, j)$ on this canvas. In our canvas, think of `i` (rows) as the Y-axis pointing downwards, and `j` (columns) as the X-axis pointing right.
-2. **The Print Function:** For every coordinate, call a separate logic function (e.g., `print_pixel(i, j)`) that directly outputs the correct character at that exact pixel based on mathematical rules.
+
+1. **Define the Canvas:** Determine the exact grid dimensions (e.g., $N \times M$). Write two simple, fixed loops to iterate through every coordinate $(i, j)$ on this canvas. In our canvas, think of `i` (rows) as the Y-axis pointing downwards, and `j` (columns) as the X-axis pointing right. Notice how indexing rows `0` to `N-1` and columns `0` to `M-1` works identically to 2D Arrays and Matrices in memory!
+
+2. **Positional Logic:** For every coordinate $(i, j)$, we will decide what to print based on its position.
 
 Let's dive into Level 1: Simple Canvas Based Printing.
 
@@ -38,11 +40,13 @@ Let's dive into Level 1: Simple Canvas Based Printing.
 
 **The Problem:** Print a solid rectangle of length $N$ and width $M$ using `*`.
 
-For $N = 3, M = 3$:
+For $N = 5, M = 6$:
 ```text
-***
-***
-***
+******
+******
+******
+******
+******
 ```
 
 ### 1. Defining the Canvas
@@ -51,7 +55,7 @@ Our fixed outer loops will simply be:
 ```cpp
 for (int i = 0; i < n; i++) {
     for (int j = 0; j < m; j++) {
-        print_pixel();
+        // We will put our print logic here
     }
     cout << "\n";
 }
@@ -59,11 +63,14 @@ for (int i = 0; i < n; i++) {
 
 ### 2. The Print Function
 For a solid rectangle, every single pixel on the canvas is a star. There are no spaces or empty regions. 
-So our print function is incredibly simple. Regardless of the coordinate `(i, j)`, we print `*`.
+So our print logic is incredibly simple. Regardless of the coordinate `(i, j)`, we print `*`.
 
 ```cpp
-void print_pixel() {
-    cout << "*";
+for (int i = 0; i < n; i++) {
+    for (int j = 0; j < m; j++) {
+        cout << "*";
+    }
+    cout << "\n";
 }
 ```
 
@@ -71,29 +78,54 @@ This might seem trivial, but it sets up our mental model perfectly: **Decouple t
 
 ---
 
-## Pattern 2: The Hollow Rectangle (Outer Boundaries)
+## Pattern 2: Dynamic Positional Logic
 
-**The Problem:** Print a hollow rectangle of length $N$ and width $M$ using `*`. The borders are filled with `*` and the interior is empty.
-
-For $N = 4, M = 5$:
+**The Problem:** Print a rectangle of length `N` and width `M` where each row is filled with the row's corresponding line number (1-indexed).
+For `N = 5, M = 6`:
 ```text
-*****
-*   *
-*   *
-*****
+111111
+222222
+333333
+444444
+555555
 ```
 
 ### 1. Defining the Canvas
-Just like the solid rectangle, our canvas is $N \times M$. The loops remain exactly the same!
 
+Once again, the canvas is exactly the same. We iterate through `i` from `0` to `N - 1` and `j` from `0` to `M - 1`.
+
+### 2. The Print Function (Positional Logic)
+
+Instead of printing a static `*`, we need to ask: *"What goes here based on my coordinates?"*
+Looking at the pattern, the value printed depends entirely on the current row. If we are on row `i = 0`, we print `1`. If we are on row `i = 1`, we print `2`.
+The mathematical relationship is simply `i + 1`. We don't even need an `if` statement; we just inject our positional logic directly into the print output:
 ```cpp
 for (int i = 0; i < n; i++) {
     for (int j = 0; j < m; j++) {
-        print_pixel(i, j, n, m);
+        // Positional Logic: Print the row index + 1
+        cout << i + 1;
     }
     cout << "\n";
 }
 ```
+
+---
+
+## Pattern 3: The Hollow Rectangle (Outer Boundaries)
+
+**The Problem:** Print a hollow rectangle of length $N$ and width $M$ using `*`. The borders are filled with `*` and the interior is empty.
+
+For $N = 5, M = 6$:
+```text
+******
+*    *
+*    *
+*    *
+******
+```
+
+### 1. Defining the Canvas
+Just like the solid rectangle, our canvas is $N \times M$. The loops remain exactly the same!
 
 ### 2. The Print Function
 Now, how do we mathematically define a "border"?
@@ -106,12 +138,16 @@ On an $(i, j)$ coordinate system (where $i$ goes from $0$ to $N-1$ and $j$ from 
 If we are on any of these extreme coordinates, we print a `*`. Otherwise, we are inside the hollow region, so we print a space.
 
 ```cpp
-void print_pixel(int i, int j, int n, int m) {
-    if (i == 0 || i == n - 1 || j == 0 || j == m - 1) {
-        cout << "*";
-    } else {
-        cout << " ";
+for (int i = 0; i < n; i++) {
+    for (int j = 0; j < m; j++) {
+        // Positional Logic for Boundaries
+        if (i == 0 || i == n - 1 || j == 0 || j == m - 1) {
+            cout << "*";
+        } else {
+            cout << " ";
+        }
     }
+    cout << "\n";
 }
 ```
 
@@ -144,4 +180,4 @@ Pattern printing is best learned by doing. Test your newfound coordinate geometr
 
 ## Video Explanation
 
-[![Pattern Printing: The Canvas Approach](../Images/video-lecture-thumbnail.jpg)]()
+[![Pattern Printing: The Canvas Approach](../Images/video-lecture-thumbnail.jpg)](https://drive.google.com/file/d/1s0IrPwcAJPVx2gO0T2OuzEGeNpiLPpoO/view?usp=drive_link)
