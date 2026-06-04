@@ -1,244 +1,187 @@
 ---
-title: "The Art of Pattern Printing: Level 4 - Composition of Lines"
+title: "The Art of Pattern Printing: Level 4 - The Magic of Repetition (Modulo)"
 slug: "pattern-printing-level-4"
 track: "beginner-dsa"
 level: "Beginner"
 order: 4
 status: "Draft"
-duration: ""
-videoStatus: "Not Published"
-updatedAt: "2026-05-26"
-description: "Learn how to combine coordinate equations using logical operators to draw complex intersecting shapes like crosses and diamonds."
+duration: "21 min 59 sec"
+videoStatus: "Published"
+updatedAt: "2026-06-04"
+description: "Learn the ultimate CP cheat code: using Modulo Arithmetic (%) to repeat complex patterns infinitely across a canvas."
 ---
 
-# The Art of Pattern Printing: Level 4 - Composition of Lines
+# The Art of Pattern Printing: Level 4 - The Magic of Repetition
 
-In previous levels, we learned how to draw single lines and single regions. But most interview patterns aren't just one line—they are complex shapes made of multiple intersecting lines. 
+We have officially mastered the Canvas Technique. We can draw lines (`==`) and fill regions (`>=`). But there is one final pattern printing challenge that strikes fear into the hearts of beginners: **Infinite Repeating Patterns.**
 
-How do we draw two things at once? We simply use Logical Operators (`||` and `&&`)! 
+How do you draw a continuous zig-zag wave that repeats 20 times across the screen? Traditional nested loops collapse entirely under this requirement.
+
+Welcome to Level 4, where we introduce the **Monomer and Polymer** technique using the magic of Modulo Arithmetic (`%`)!
 
 ---
 
-## Pattern 1: The Plus Sign
+## The Core Concept: Monomers and Polymers
 
-**The Problem:** Print a plus sign `+` inside an $N \times N$ canvas. (Assume $N$ is odd).
+In chemistry, a complex *Polymer* is created by chaining together simple, repeating blocks called *Monomers*. We apply the exact same logic to our 2D canvas.
 
-For $N = 5$:
+If you have an equation that successfully draws a shape inside a $4 \times 4$ box, you don't need to write a new equation for the next box. You simply take the column index $j$ and apply **Modulo 4** (`j % 4`). 
+
+Because `j % 4` traps the coordinate mathematically between $0$ and $3$, the $4 \times 4$ logic will seamlessly repeat itself infinitely across the $X$-axis!
+
+---
+
+## Pattern 1: The Infinite Intersecting "X" Grid
+
+**The Problem:** Print an infinite grid of intersecting "X" patterns. The "X" shapes should share their corner stars.
+
+For $N = 5$, repeated 4 times in both directions:
 ```text
-  *  
-  *  
-*****
-  *  
-  *  
+*   *   *   *   *
+ * * * * * * * * 
+  *   *   *   *  
+ * * * * * * * * 
+*   *   *   *   *
+ * * * * * * * * 
+  *   *   *   *  
+ * * * * * * * * 
+*   *   *   *   *
+... (and so on)
 ```
 
 ### 1. Defining the Canvas
-Our canvas is $N \times N$. 
+A single "X" fits in an $N \times N$ box. But wait! They share borders (the corner stars overlap). This means the actual "period" (the distance before the pattern starts repeating) is $N - 1$.
+
+Total rows: $4 \times (N - 1) + 1$
+Total columns: $4 \times (N - 1) + 1$
+
+### 2. The Inline Logic (2D Modulo)
+Let's define the modulo period: `P = n - 1`.
+Whenever we evaluate our coordinates, we wrap both $i$ and $j$ into this period:
+`int mod_i = i % P;`
+`int mod_j = j % P;`
+
+Now, we just ask: inside this small $P \times P$ local box, what are the equations for an "X"?
+We already know them from Level 2!
+- Primary Diagonal: `mod_i == mod_j`
+- Secondary Diagonal: `mod_i + mod_j == P`
+
+```cpp
+int P = n - 1; // The repeating period
+int rows = 4 * P + 1;
+int cols = 4 * P + 1;
+
+for (int i = 0; i < rows; i++) {
+    for (int j = 0; j < cols; j++) {
+        int mod_i = i % P;
+        int mod_j = j % P;
+        
+        if (mod_i == mod_j || mod_i + mod_j == P) {
+            cout << "*";
+        } else {
+            cout << " "; 
+        }
+    }
+    cout << "\n";
+}
+```
+
+---
+
+## Pattern 2: The Continuous Zig-Zag (The Ultimate Interview Pattern)
+
+This is one of the most frequently asked pattern printing questions.
+
+**The Problem:** Print a continuous Zig-Zag (a `W` or `M` wave) of height $N$.
+
+For $N = 4$:
+```text
+*     *     *     *     *
+ *   * *   * *   * *   * 
+  * *   * *   * *   * *  
+   *     *     *     *   
+```
+
+### 1. Identify the Monomer
+If you look closely at the zig-zag, the repeating unit is a "V" shape. 
+To build a "V" of height $N=4$, how many columns does it take before it starts repeating? 
+- It goes down for 4 steps, and back up for 2 steps (the top points are shared).
+- Mathematically, the length of the repeating monomer block for *any* zig-zag is always **$2N - 2$**.
+- For $N = 4$, the monomer length is $2(4) - 2 = 6$.
+
+### 2. Build the Monomer Line Equations
+Inside a $4 \times 6$ block, a "V" is just two lines:
+1. **The Downward Stroke:** A primary diagonal! `i == j`.
+2. **The Upward Stroke:** A secondary diagonal. Since it needs to hit the bottom at row $3$ and go back up to row $0$ at column $6$, its equation is `i + j == 6`.
+*(Notice that 6 is exactly our monomer length $2N - 2$!)*
+
+### 3. Create the Polymer
+We wrap every instance of `j` with modulo **$2N - 2$**.
+
 ```cpp
 for (int i = 0; i < n; i++) {
-    for (int j = 0; j < n; j++) {
-        print_pixel(i, j, n);
+    for (int j = 0; j < 25; j++) { // Loop j to any width you want!
+        int mod_val = 2 * n - 2;
+        
+        // Downward Stroke || Upward Stroke
+        if (i == (j % mod_val) || i + (j % mod_val) == mod_val) {
+            cout << "*";
+        } else {
+            cout << " ";
+        }
     }
     cout << "\n";
 }
 ```
 
-### 2. The Print Function (Logical OR)
-What is a plus sign? It is simply a vertical line intersecting with a horizontal line exactly at the center of the canvas.
-We know the center is at `mid = n / 2`.
-- The horizontal line equation: `i == mid`
-- The vertical line equation: `j == mid`
-
-To print the plus sign, a star should be drawn if we are on the horizontal line **OR** if we are on the vertical line.
-
-```cpp
-void print_pixel(int i, int j, int n) {
-    int mid = n / 2;
-    if (i == mid || j == mid) {
-        cout << "*";
-    } else {
-        cout << " "; 
-    }
-}
-```
-
 ---
 
-## Pattern 2: The "X" Sign
+## Pattern 3: The Alphabetical Zig-Zag
 
-**The Problem:** Print an "X" pattern inside an $N \times N$ canvas.
+**The Problem:** Print the continuous Zig-Zag, but replace the stars with the alphabetical character of the corresponding row!
 
 For $N = 5$:
 ```text
-*   * 
- * *  
-  *   
- * *  
-*   * 
+a       a       a       a
+ b     b b     b b     b 
+  c   c   c   c   c   c  
+   d d     d d     d d   
+    e       e       e    
 ```
 
-### 1. Defining the Canvas
-The canvas is $N \times N$.
+By now, you should be smiling. The geometric boundaries are absolutely flawless. We just inject our Positional Logic!
+
 ```cpp
 for (int i = 0; i < n; i++) {
-    for (int j = 0; j < n; j++) {
-        print_pixel(i, j, n);
+    for (int j = 0; j < 25; j++) {
+        int mod_val = 2 * n - 2;
+        
+        if (i == (j % mod_val) || i + (j % mod_val) == mod_val) {
+            cout << char('a' + i);
+        } else {
+            cout << " ";
+        }
     }
     cout << "\n";
 }
 ```
-
-### 2. The Print Function
-What is an "X"? It is the intersection of the **Primary Diagonal** and the **Secondary Diagonal**.
-We learned these equations in Level 2!
-- Primary Diagonal: `i == j`
-- Secondary Diagonal: `i + j == n - 1`
-
-Again, we simply combine them with a logical OR.
-
-```cpp
-void print_pixel(int i, int j, int n) {
-    if (i == j || i + j == n - 1) {
-        cout << "*";
-    } else {
-        cout << " "; 
-    }
-}
-```
-
-![A 2D grid diagram of size N by N. Draw the primary diagonal (i == j) and the secondary diagonal (i + j == N - 1). Show how the 'OR' condition perfectly combines them into an 'X' shape. The center star where they intersect should be highlighted to show it satisfies both conditions.](../Images/x_pattern.png)
-
----
-
-## Pattern 3: Composition of Regions (The Hourglass)
-
-We just composed lines using `||`. But what if we want to draw solid, filled shapes like a Butterfly or an Hourglass? 
-We simply compose **regions** using inequalities (`>=`, `<=`) and combine them with logical AND (`&&`) or logical OR (`||`)!
-
-**The Problem:** Print a solid Hourglass shape.
-For $N = 5$:
-```text
-*****
- *** 
-  *  
- *** 
-*****
-```
-
-### 1. Defining the Canvas
-The canvas is simply $N \times N$.
-```cpp
-for (int i = 0; i < n; i++) {
-    for (int j = 0; j < n; j++) {
-        print_pixel(i, j, n);
-    }
-    cout << "\n";
-}
-```
-
-### 2. The Print Function (Intersecting Regions)
-An hourglass is made of two filled triangles:
-1. **The Top Triangle:** It must be *above* the primary diagonal (`i <= j`) AND *above* the secondary diagonal (`i + j <= n - 1`).
-2. **The Bottom Triangle:** It must be *below* the primary diagonal (`i >= j`) AND *below* the secondary diagonal (`i + j >= n - 1`).
-
-To print the full hourglass, we just ask: Are we in the top triangle OR are we in the bottom triangle?
-
-```cpp
-void print_pixel(int i, int j, int n) {
-    bool top_triangle = (i <= j && i + j <= n - 1);
-    bool bottom_triangle = (i >= j && i + j >= n - 1);
-    
-    if (top_triangle || bottom_triangle) {
-        cout << "*";
-    } else {
-        cout << " "; 
-    }
-}
-```
-
-If you change the `||` to an `&&` (or swap the region equations), you can instantly flip this logic into a solid **Butterfly Pattern**! 
-
----
-
-## The Masterpiece: The Hollow Diamond
-
-Now, let's look at a problem where the traditional approach of nested loops completely falls apart and becomes a nightmare to code.
-
-**The Problem:** Print a hollow diamond.
-For $N = 5$:
-```text
-    *
-   * *
-  *   *
- *     *
-*       *
- *     *
-  *   *
-   * *
-    *
-```
-
-### 1. Defining the Canvas
-Notice the size of the diamond. The top half takes $N$ rows, and the bottom half takes $N - 1$ rows.
-Total rows = $2N - 1$.
-Total columns = $2N - 1$.
-
-```cpp
-int canvas_size = 2 * n - 1;
-for (int i = 0; i < canvas_size; i++) {
-    for (int j = 0; j < canvas_size; j++) {
-        print_pixel(i, j, n);
-    }
-    cout << "\n";
-}
-```
-
-### 2. The Print Function (Four Intersecting Lines)
-If you try to write nested loops for the top half, and then another set of nested loops for the bottom half, you will be swimming in off-by-one errors. 
-
-Instead, let's look at the diamond for what it really is geometrically. A hollow diamond is simply the intersection of four shifted diagonal lines! 
-Think back to the "Shifted Diagonals" concept we learned in Level 2. The diamond is composed of:
-1. **Top-Left Edge:** A secondary diagonal shifted left (`i + j == n - 1`)
-2. **Top-Right Edge:** A primary diagonal shifted up (`i == j - n + 1`)
-3. **Bottom-Left Edge:** A primary diagonal shifted down (`i == j + n - 1`)
-4. **Bottom-Right Edge:** A secondary diagonal shifted right (`i + j == 3*n - 3`)
-
-By combining these four line equations with the logical OR operator (`||`), the diamond forms naturally without a single confusing inner loop:
-
-```cpp
-void print_pixel(int i, int j, int n) {
-    if (i + j == n - 1 || i == j - n + 1 || i == j + n - 1 || i + j == 3*n - 3) {
-        cout << '*';
-    } else {
-        cout << ' ';
-    }
-}
-```
-That's it. What could have been 40 lines of spaghetti code with overlapping loops is solved elegantly by composing four simple lines.
-
-![A 2D grid representing a 2N-1 by 2N-1 canvas. Draw the 4 extended diagonal lines intersecting to form the diamond. Color-code each line and attach its respective mathematical equation to visually prove how the logical OR creates the shape.](../Images/hollow_diamond_pattern.png)
-
----
 
 ## The Verdict
 
-By composing lines with `||` and shifting them across the canvas, we've unlocked the ability to draw highly complex intersecting shapes without adding a single extra `for` loop.
+By combining coordinate geometry and the magical repetition of the Modulo (`%`) operator, we can draw and repeat highly complex intersecting shapes without adding a single extra `for` loop.
 
-In the final level, we will learn how to take these shapes and repeat them infinitely across the canvas using Modulo Math!
+But what about patterns that radiate from a center point, like spiral squares or elegant diamonds? In the final level, Level 5, we will cross the ultimate frontier: using Absolute Values to calculate geometric distances!
 
 ---
 
 ## Let's Practice!
 
-Pattern printing is best learned by doing. Test your newfound coordinate geometry skills with these problems!
-
-- **[Hollow Diamond](https://maang.in/problems/Hollow-Diamond-121)**
-- **[Butterfly Pattern](https://maang.in/problems/Butterfly-Pattern-1093)**
-- **[Another Pyramid Pattern](https://maang.in/problems/Another-Pyramid-Pattern-1094)**
-- **[Pyramid Pattern](https://maang.in/problems/Pyramid-Pattern-1091)**
+- **[Pattern Problem 1 AZ101](https://maang.in/problems/Pattern-Problem-1-AZ101-317)**
+- **[Pattern Problem 2 AZ101](https://maang.in/problems/Pattern-Problem-2-AZ101-318)**
+- **[Zig-zag Snake](https://maang.in/problems/Zigzag-Snake-772)**
 
 ---
 
 ## Video Explanation
 
-[![Pattern Printing: The Canvas Approach](../Images/video-lecture-thumbnail.jpg)]()
+[![Pattern Printing: The Magic of Repetition](../Images/video-lecture-thumbnail.jpg)](https://drive.google.com/file/d/1EQRJsOnF1toUyeRsyI3qE3-RzciWCU2V/view?usp=drive_link)
