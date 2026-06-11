@@ -40,7 +40,7 @@ Imagine you are writing software for the brakes on a self-driving car. You would
 
 In software engineering, we plan for the worst. If our worst-case scenario is fast enough, we know our program will never crash or freeze under pressure.
 
-<img src="../Images/Best_Case_and_Worst_Case.png" alt="Best Case and Worst Case" style="max-width: 100%; height: auto;" identifier="az-img-upload">
+<img src="https://d3pdqc0wehtytt.cloudfront.net/media/9651/de6ac6e5-cfd2-46d3-b061-1ec1ed35c93a.png" alt="Best Case and Worst Case" style="max-width: 100%; height: auto;" identifier="az-img-upload">
 
 ---
 

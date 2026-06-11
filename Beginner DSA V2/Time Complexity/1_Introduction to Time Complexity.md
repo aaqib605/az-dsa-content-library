@@ -63,7 +63,7 @@ Because these factors constantly change, measuring "seconds" is an unreliable wa
 
 **Time Complexity** solves this by completely ignoring hardware. Instead of measuring time, **we count the number of basic operations** (like additions, assignments, or comparisons) your code performs relative to the input size ($N$).
 
-<img src="../Images/Time_vs_Actual_Runtime.png" alt="Time vs Actual Runtime" style="max-width: 100%; height: auto;" identifier="az-img-upload">
+<img src="https://d3pdqc0wehtytt.cloudfront.net/media/9651/33fa37c5-82d4-4bd9-98cd-49380720bf9f.png" alt="Time vs Actual Runtime" style="max-width: 100%; height: auto;" identifier="az-img-upload">
 
 ---
 
@@ -112,7 +112,7 @@ void printAllPairs(int arr[], int n) {
 
 This is where things get dangerous. As $N$ gets large, nested loops can cause your program to freeze or hit a "Time Limit Exceeded" (TLE) error on coding platforms.
 
-<img src="../Images/Algorithm_Time_Complexity_Comparision.png" alt="Algorithm Time Complexity Comparision" style="max-width: 100%; height: auto;" identifier="az-img-upload">
+<img src="https://d3pdqc0wehtytt.cloudfront.net/media/9651/cc2cebeb-9ff7-42f8-8b28-f1e5e54a0328.png" alt="Algorithm Time Complexity Comparision" style="max-width: 100%; height: auto;" identifier="az-img-upload">
 
 ---
 

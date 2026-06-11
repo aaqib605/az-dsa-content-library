@@ -12,9 +12,9 @@ Time complexity becomes much easier to understand when you connect each Big O pa
 
 ## Table of Contents
 
-1. [Common Time Complexities](#common-time-complexities)
-2. [Analyzing Code for Time Complexity](#analyzing-code-for-time-complexity)
-3. [Code Examples for Time Complexity](#code-examples-for-time-complexity)
+1. Common Time Complexities
+2. Analyzing Code for Time Complexity
+3. Code Examples for Time Complexity
 
 ---
 
@@ -99,7 +99,7 @@ The absolute slowest. If $N=10$, it's 3.6 million operations. If $N=12$, it's 47
 
 - **Example:** Finding all permutations of a string.
 
-<img src="../Images/Big_O_Time_Complexity_Cheat_Sheet.png" alt="Big O Time Complexity Cheat Sheet" style="max-width: 100%; height: auto;" identifier="az-img-upload">
+<img src="https://d3pdqc0wehtytt.cloudfront.net/media/9651/1c8883df-caf9-42ba-8543-47fc7b4a7265.png" alt="Big O Time Complexity Cheat Sheet" style="max-width: 100%; height: auto;" identifier="az-img-upload">
 
 ---
 
@@ -226,7 +226,7 @@ Each call spawns _two_ more calls. The number of calls doubles at each level of 
 
 **Time Complexity:** $O(2^N)$
 
-<img src="../Images/Recursive_Function.png" alt="Recursive Function" style="max-width: 100%; height: auto;" identifier="az-img-upload">
+<img src="https://d3pdqc0wehtytt.cloudfront.net/media/9651/13a3d020-0e5f-480b-9f9a-66052890f688.png" alt="Recursive Function" style="max-width: 100%; height: auto;" identifier="az-img-upload">
 
 ### Introducing the Master Theorem
 

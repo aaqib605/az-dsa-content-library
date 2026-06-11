@@ -12,8 +12,8 @@ Time complexity is not just something you calculate after writing code. It helps
 
 ## Table of Contents
 
-1. [Time Complexity in Problem Solving](#time-complexity-in-problem-solving)
-2. [How to Check if a Solution Will Pass](#how-to-check-if-a-solution-will-pass)
+1. Time Complexity in Problem Solving
+2. How to Check if a Solution Will Pass
 
 ---
 
