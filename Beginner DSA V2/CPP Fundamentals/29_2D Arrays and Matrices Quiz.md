@@ -1,432 +1,415 @@
 <READING_WIDGET>
+# 2D Arrays and Matrices Quiz
 
-# Time Complexity Quiz
-
+Test your understanding of mapping grids and handling multidimensional data!
 </READING_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **What does time complexity describe?**
+        **In a standard 2D Array `int arr[3][4];`, what does the `3` represent?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        Time complexity does not measure actual wall-clock time because that depends on hardware.
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        Time complexity describes how the runtime of an algorithm scales or grows relative to the size of the input. It is independent of the hardware running the code.
+        The first bracket always defines the Rows, the second defines the Columns
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                The exact number of seconds a program takes to run
+                The number of Columns.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                How the runtime of an algorithm grows as input size increases
+                The number of Rows.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                The amount of memory used by the input array
+                The depth of the array.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                The number of lines in a program
+                The total number of elements.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Time Complexity, Big O, Basics
+        C++, 2D Arrays and Matrices, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **Which time complexity is generally the fastest?**
+        **If you want to access the very bottom-right element in a `3 x 4` matrix, what indices do you use?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        Look for the complexity that implies the runtime doesn't change regardless of input size.
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        $O(1)$ means the runtime is constant and does not grow with the input size $N$. It is the fastest possible time complexity.
+        Because of 0-indexing, a 3x4 matrix has rows `0,1,2` and columns `0,1,2,3`. The bottom right is `2, 3`
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(1)$
+                `arr[3][4]`
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                `arr[4][3]`
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                `arr[2][3]`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N \log N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N^2)$
+                `arr[-1][-1]`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Big O, Complexity Order
+        C++, 2D Arrays and Matrices, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **What is the simplified Big O complexity of $T(N) = 5N^2 + 100N + 20$?**
+        **C++ stores 2D arrays in contiguous memory, placing items row-by-row. What is this concept called?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        In Big O notation, we drop constants and only keep the term that grows the fastest.
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        In Big O notation, we ignore constant multipliers and lower-order terms because for very large $N$, the highest degree term dominates the runtime. Thus, $5N^2 + 100N + 20$ simplifies to $O(N^2)$.
+        Row-Major Order means `arr[0][0]` sits right next to `arr[0][1]` in RAM
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(5N^2 + 100N + 20)$
+                Column-Major Order
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N^2 + N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N^2)$
+                Row-Major Order
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N)$
+                Grid-Lock Memory
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                Matrix Memory Allocation
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Big O, Mathematical Simplification
+        C++, 2D Arrays and Matrices, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **What is the time complexity of this code?**
-        ```cpp
-        for (int i = 0; i < n; i++) {
-            cout << arr[i] << "\n";
-        }
-        ```
+        **Because of the memory layout discussed in Question 3, which traversal method is significantly faster and more "cache-friendly"?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        The loop runs from 0 to $n-1$, incrementing by 1 each time.
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        The loop iterates exactly $N$ times. Inside the loop, printing takes $O(1)$ time. Thus, the total time complexity is $O(N)$.
+        Traversing row-wise means the CPU can fetch entire chunks of contiguous memory into the cache at once
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(1)$
+                Column-wise Traversal
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(\log N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N)$
+                Row-wise Traversal
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N^2)$
+                Diagonal Traversal
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                Random Traversal
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Loops, Code Analysis
+        C++, 2D Arrays and Matrices, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **What is the time complexity of this code?**
-        ```cpp
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                cout << i << " " << j << "\n";
-            }
-        }
-        ```
+        **In a square matrix of size $N \times N$, what is always true for any element lying exactly on the **Main Diagonal** (top-left to bottom-right)?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        Think about how many times the inner print statement runs relative to $n$.
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        The outer loop runs $N$ times. For every iteration of the outer loop, the inner loop also runs $N$ times. Therefore, the total number of iterations is $N \times N = N^2$, making the time complexity $O(N^2)$.
+        The main diagonal coordinates are `(0,0)`, `(1,1)`, `(2,2)`, etc., meaning `i == j`
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N)$
+                Its row index is 0.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N + N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N \log N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N^2)$
+                Its row index equals its column index (`i == j`).
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                The sum of its row and column indices is $N - 1$.
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                Its value is 1.
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Nested Loops, Code Analysis
+        C++, 2D Arrays and Matrices, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **What is the time complexity of this loop?**
-    ```cpp
-    for (int i = 1; i < n; i *= 2) {
-        cout << i << "\n";
-    }
-    ```
+        **You want to pass a raw static 2D array to a function: `void print(int arr[][])`. What happens?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        The loop variable $i$ doubles in every step instead of increasing by 1.
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        Because $i$ multiplies by 2 on each iteration, it reaches $n$ extremely fast. The number of iterations needed for $2^k$ to reach $n$ is $k = \log_2 N$. Thus, the time complexity is $O(\log N)$.
+        The compiler needs the column size to calculate memory offsets. Because of Row-Major order, the physical address is calculated as: `Base Address + (i * Total Columns + j) * sizeof(type)`. Without knowing `Total Columns`, the math is impossible!
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(1)$
+                It prints the matrix perfectly.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(\log N)$
+                It causes a runtime error.
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                It causes a Compilation Error because you MUST specify the column size in the parameter.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N^2)$
+                It only prints the first row.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Logarithmic Complexity, Loops
+        C++, 2D Arrays and Matrices, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **If an algorithm checks every possible pair in an array of size $N$, what is its typical time complexity?**
+        **Because passing raw 2D arrays to functions is annoying, what do modern competitive programmers almost exclusively use instead?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        How many pairs exist in an array of size $N$?
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        The number of pairs in an array of size $N$ is roughly $N \times N / 2$. Since we ignore constants in Big O notation, the time complexity of checking every pair is $O(N^2)$.
+        Vectors of Vectors are dynamically resizable and can be easily passed by reference!
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(1)$
+                Pointers
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(\log N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N^2)$
+                `vector<vector<int>>`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                1D Arrays mapped with math
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                `matrix<int>`
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Pairs, Combinatorics
+        C++, 2D Arrays and Matrices, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **A C++ solution has $N = 10^5$ and uses an $O(N^2)$ algorithm for a 1-second time limit. Based on the $10^8$ operations rule, what is most likely to happen?**
+        **What is the correct syntax to find the number of rows in a `vector<vector<int>> grid`?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        Calculate $(10^5)^2$ and compare it to the standard $10^8$ operations per second limit.
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        An $O(N^2)$ algorithm for $N = 10^5$ will perform approximately $(10^5)^2 = 10^{10}$ operations. A standard C++ program performs roughly $10^8$ operations in 1 second. $10^{10}$ is much greater than $10^8$, so the program will receive a Time Limit Exceeded (TLE) error.
+        Since it is a vector of vectors, `grid.size()` tells you how many inner vectors (rows) exist
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                It will pass easily
+                `grid.rows()`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                It will probably get Time Limit Exceeded (TLE)
+                `grid.size()`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                It will use no extra memory
+                `grid[0].size()`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                It will become $O(N \log N)$ automatically
+                `grid.length()`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        TLE, Constraints, Magic Number
+        C++, 2D Arrays and Matrices, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **What is the time complexity of searching for a value in a sorted array using binary search?**
+        **What is the correct syntax to find the number of columns in the first row of a `vector<vector<int>> grid`?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        Binary search cuts the search space in half at every step.
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        Binary search repeatedly halves the number of elements it needs to search. This process of repeated halving leads to a time complexity of $O(\log N)$.
+        `grid[0]` gives you the first row (a vector), so calling `.size()` on it gives the number of columns! **Pro Tip:** Always check `if (!grid.empty())` before calling `grid[0]` to avoid a Segmentation Fault on empty matrix inputs
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(1)$
+                `grid.cols()`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(\log N)$
+                `grid.size()`
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                `grid[0].size()`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N^2)$
+                `grid.length()`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Binary Search, Logarithmic Complexity
+        C++, 2D Arrays and Matrices, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **In interviews, when someone asks for "space complexity", they usually mean:**
+        **You want to iterate over the **Secondary Diagonal** (top-right to bottom-left) of an $N \times N$ matrix. Which loop setup is correct?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        Space complexity tracks the extra memory created specifically by your algorithm.
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        Space complexity refers to the auxiliary (extra) memory used by your algorithm, excluding the space taken by the inputs themselves.
+        The secondary diagonal coordinates always satisfy `i + j = N - 1`, which means `j = N - 1 - i`
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                The exact RAM size of the computer
+                `for (int i = 0; i < N; i++) { cout << arr[i][i]; }`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                The number of input elements only
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                The extra memory used by the algorithm (auxiliary space)
+                `for (int i = 0; i < N; i++) { cout << arr[i][N - 1 - i]; }`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                The total runtime of the program
+                `for (int i = N - 1; i >= 0; i--) { cout << arr[i][i]; }`
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                `for (int i = 0; i < N; i++) { cout << arr[N][i]; }`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Space Complexity, Auxiliary Space
+        C++, 2D Arrays and Matrices, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>

@@ -1,432 +1,416 @@
 <READING_WIDGET>
+# Variables, Data Types, and Operators Quiz
 
-# Time Complexity Quiz
+Test your understanding of how C++ stores and manipulates data!
 
 </READING_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **What does time complexity describe?**
+        **Roughly what is the maximum positive value that a standard 32-bit `int` can store in C++?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        Time complexity does not measure actual wall-clock time because that depends on hardware.
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        Time complexity describes how the runtime of an algorithm scales or grows relative to the size of the input. It is independent of the hardware running the code.
+        An `int` caps out at roughly $2.14 \times 10^9$. Always remember this limit!
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                The exact number of seconds a program takes to run
+                $10^5$
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                How the runtime of an algorithm grows as input size increases
+                $10^9$ ($2 \times 10^9$)
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                The amount of memory used by the input array
+                $10^{18}$
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                The number of lines in a program
+                Infinity
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Time Complexity, Big O, Basics
+        C++, Variables, Data Types, and Operators, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **Which time complexity is generally the fastest?**
+        **If a problem states the answer can be up to $10^{15}$, which data type MUST you use to avoid Integer Overflow?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        Look for the complexity that implies the runtime doesn't change regardless of input size.
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        $O(1)$ means the runtime is constant and does not grow with the input size $N$. It is the fastest possible time complexity.
+        `long long` uses 64 bits and can store numbers up to roughly $9 \times 10^{18}$
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(1)$
+                `int`
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                `double`
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                `long long`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N \log N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N^2)$
+                `float`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Big O, Complexity Order
+        C++, Variables, Data Types, and Operators, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **What is the simplified Big O complexity of $T(N) = 5N^2 + 100N + 20$?**
+        **What is the value of `7 / 2` in standard C++?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        In Big O notation, we drop constants and only keep the term that grows the fastest.
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        In Big O notation, we ignore constant multipliers and lower-order terms because for very large $N$, the highest degree term dominates the runtime. Thus, $5N^2 + 100N + 20$ simplifies to $O(N^2)$.
+        Integer division truncates the decimal part completely. `3.5` becomes `3`
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(5N^2 + 100N + 20)$
+                `3.5`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N^2 + N)$
+                `4`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N^2)$
+                `3`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N)$
+                A compilation error
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Big O, Mathematical Simplification
+        C++, Variables, Data Types, and Operators, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **What is the time complexity of this code?**
-        ```cpp
-        for (int i = 0; i < n; i++) {
-            cout << arr[i] << "\n";
-        }
-        ```
+        **What does the Modulo Operator `%` calculate?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        The loop runs from 0 to $n-1$, incrementing by 1 each time.
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        The loop iterates exactly $N$ times. Inside the loop, printing takes $O(1)$ time. Thus, the total time complexity is $O(N)$.
+        Modulo `%` gives you the remainder, which is critical for finding odd/even numbers or wrapping around limits
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(1)$
+                The percentage.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(\log N)$
+                The quotient of division.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N)$
+                The remainder of division.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N^2)$
+                The absolute value.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Loops, Code Analysis
+        C++, Variables, Data Types, and Operators, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **What is the time complexity of this code?**
-        ```cpp
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                cout << i << " " << j << "\n";
-            }
-        }
-        ```
+        **What is the result of `15 % 4`?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        Think about how many times the inner print statement runs relative to $n$.
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        The outer loop runs $N$ times. For every iteration of the outer loop, the inner loop also runs $N$ times. Therefore, the total number of iterations is $N \times N = N^2$, making the time complexity $O(N^2)$.
+        $15 / 4 = 3$ with a remainder of $3$
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N)$
+                `3.75`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N + N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N \log N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N^2)$
+                `3`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                `4`
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                `1`
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Nested Loops, Code Analysis
+        C++, Variables, Data Types, and Operators, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **What is the time complexity of this loop?**
-    ```cpp
-    for (int i = 1; i < n; i *= 2) {
-        cout << i << "\n";
-    }
-    ```
+        **You want to cast a `double` variable named `price` into an integer using standard C++ practices. Which syntax is preferred?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        The loop variable $i$ doubles in every step instead of increasing by 1.
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        Because $i$ multiplies by 2 on each iteration, it reaches $n$ extremely fast. The number of iterations needed for $2^k$ to reach $n$ is $k = \log_2 N$. Thus, the time complexity is $O(\log N)$.
+        Both the traditional C-style cast `(int)price` and the modern, safer C++ `static_cast<int>(price)` explicitly truncate the decimal part and convert the value to an integer
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(1)$
+                `integer(price)`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(\log N)$
+                `(int)price` (or `static_cast<int>(price)`)
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N)$
+                `int: price`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N^2)$
+                `convert.to_int(price)`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Logarithmic Complexity, Loops
+        C++, Variables, Data Types, and Operators, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **If an algorithm checks every possible pair in an array of size $N$, what is its typical time complexity?**
+        **What is the ASCII value of the character `'A'`?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        How many pairs exist in an array of size $N$?
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        The number of pairs in an array of size $N$ is roughly $N \times N / 2$. Since we ignore constants in Big O notation, the time complexity of checking every pair is $O(N^2)$.
+        `'A'` is 65, `'a'` is 97, and `'0'` is 48. Knowing these is a massive hack for string problems!
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(1)$
+                0
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(\log N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N^2)$
+                65
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                97
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                48
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Pairs, Combinatorics
+        C++, Variables, Data Types, and Operators, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **A C++ solution has $N = 10^5$ and uses an $O(N^2)$ algorithm for a 1-second time limit. Based on the $10^8$ operations rule, what is most likely to happen?**
+        **`a++` is known as the post-increment operator. If `int a = 5; int b = a++;`, what are the values of `a` and `b`?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        Calculate $(10^5)^2$ and compare it to the standard $10^8$ operations per second limit.
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        An $O(N^2)$ algorithm for $N = 10^5$ will perform approximately $(10^5)^2 = 10^{10}$ operations. A standard C++ program performs roughly $10^8$ operations in 1 second. $10^{10}$ is much greater than $10^8$, so the program will receive a Time Limit Exceeded (TLE) error.
+        Because it is post-increment, `b` gets the *current* value of `a` (5), and *then* `a` increments to 6
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                It will pass easily
+                `a = 6`, `b = 6`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                It will probably get Time Limit Exceeded (TLE)
+                `a = 6`, `b = 5`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                It will use no extra memory
+                `a = 5`, `b = 6`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                It will become $O(N \log N)$ automatically
+                `a = 5`, `b = 5`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        TLE, Constraints, Magic Number
+        C++, Variables, Data Types, and Operators, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **What is the time complexity of searching for a value in a sorted array using binary search?**
+        **You need to store the exact value of Pi ($3.1415926535...$) with high precision. Which data type should you prefer?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        Binary search cuts the search space in half at every step.
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        Binary search repeatedly halves the number of elements it needs to search. This process of repeated halving leads to a time complexity of $O(\log N)$.
+        `double` provides double the precision of a standard `float` and is the industry standard for floating-point math
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(1)$
+                `float`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(\log N)$
+                `int`
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                `double`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N^2)$
+                `long long`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Binary Search, Logarithmic Complexity
+        C++, Variables, Data Types, and Operators, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **In interviews, when someone asks for "space complexity", they usually mean:**
+        **What happens if you add two `int` variables that are both equal to $2 \times 10^9$?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        Space complexity tracks the extra memory created specifically by your algorithm.
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        Space complexity refers to the auxiliary (extra) memory used by your algorithm, excluding the space taken by the inputs themselves.
+        Adding these values exceeds the maximum limit of a signed 32-bit integer. In practice, this causes it to wrap around to a negative number due to binary representation limits. In standard C++, this is known as **Undefined Behavior**, meaning the compiler can break your logic completely. Always scale up to `long long`!
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                The exact RAM size of the computer
+                They successfully store $4 \times 10^9$.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                The number of input elements only
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                The extra memory used by the algorithm (auxiliary space)
+                They cause an Integer Overflow, wrapping around to a massive negative number.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                The total runtime of the program
+                The program refuses to compile.
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                C++ automatically converts them into a `long long`.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Space Complexity, Auxiliary Space
+        C++, Variables, Data Types, and Operators, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>

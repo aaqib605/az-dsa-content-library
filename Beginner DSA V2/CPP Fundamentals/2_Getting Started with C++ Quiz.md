@@ -1,432 +1,413 @@
 <READING_WIDGET>
-
-# Time Complexity Quiz
-
+# Getting Started with C++ Quiz
 </READING_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **What does time complexity describe?**
+        **What does `#include <iostream>` do in a C++ program?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        Time complexity does not measure actual wall-clock time because that depends on hardware.
+        Think about what "io" in `iostream` stands for.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        Time complexity describes how the runtime of an algorithm scales or grows relative to the size of the input. It is independent of the hardware running the code.
+        It specifically includes the `iostream` (Input/Output Stream) library required for standard input (`cin`) and output (`cout`).
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                The exact number of seconds a program takes to run
+                It compiles the program into machine code.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                How the runtime of an algorithm grows as input size increases
+                It includes the standard input/output stream library, allowing you to use `cin` and `cout`.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                The amount of memory used by the input array
+                It tells the compiler to optimize the code for speed.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                The number of lines in a program
+                It imports the entire C++ standard library.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Time Complexity, Big O, Basics
+        C++, Basics, Includes
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **Which time complexity is generally the fastest?**
+        **Which function is the mandatory entry point for every C++ program?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        Look for the complexity that implies the runtime doesn't change regardless of input size.
+        The operating system looks for a very specific function name to start execution.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        $O(1)$ means the runtime is constant and does not grow with the input size $N$. It is the fastest possible time complexity.
+        The operating system always looks for `int main()` to begin execution. Without it, the program cannot run.
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(1)$
+                `start()`
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                `init()`
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                `main()`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N \log N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N^2)$
+                `execute()`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Big O, Complexity Order
+        C++, Basics, Functions
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **What is the simplified Big O complexity of $T(N) = 5N^2 + 100N + 20$?**
+        **What does `using namespace std;` prevent you from having to type repeatedly?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        In Big O notation, we drop constants and only keep the term that grows the fastest.
+        Namespaces are like last names for standard functions and objects.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        In Big O notation, we ignore constant multipliers and lower-order terms because for very large $N$, the highest degree term dominates the runtime. Thus, $5N^2 + 100N + 20$ simplifies to $O(N^2)$.
+        Without it, you would have to write `std::cout` and `std::cin` every single time. It tells the compiler to assume you are using the standard (`std`) namespace.
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(5N^2 + 100N + 20)$
+                `#include`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N^2 + N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N^2)$
+                `std::`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N)$
+                `int main()`
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                `;`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Big O, Mathematical Simplification
+        C++, Basics, Namespaces
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **What is the time complexity of this code?**
-        ```cpp
-        for (int i = 0; i < n; i++) {
-            cout << arr[i] << "\n";
-        }
-        ```
+        **What is the standard return value for `main()` to indicate that the program ran successfully?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        The loop runs from 0 to $n-1$, incrementing by 1 each time.
+        In operating systems, zero usually means "no errors".
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        The loop iterates exactly $N$ times. Inside the loop, printing takes $O(1)$ time. Thus, the total time complexity is $O(N)$.
+        Returning `0` tells the operating system that the execution finished successfully without any errors.
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(1)$
+                `return 1;`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(\log N)$
+                `return -1;`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N)$
+                `return true;`
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                `return 0;`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N^2)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Loops, Code Analysis
+        C++, Basics, Return Values
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **What is the time complexity of this code?**
-        ```cpp
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                cout << i << " " << j << "\n";
-            }
-        }
-        ```
+        **Why do competitive programmers often use `#include <bits/stdc++.h>`?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        Think about how many times the inner print statement runs relative to $n$.
+        It's a GCC-specific header file that acts as an umbrella for almost everything else.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        The outer loop runs $N$ times. For every iteration of the outer loop, the inner loop also runs $N$ times. Therefore, the total number of iterations is $N \times N = N^2$, making the time complexity $O(N^2)$.
+        It's a GCC compiler extension that includes almost everything from `<iostream>` to `<vector>` to `<algorithm>`, which is perfect for the time-constrained environment of CP where saving typing time matters.
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N)$
+                It makes the code run 10x faster.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N + N)$
+                It automatically solves compilation errors.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N \log N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N^2)$
+                It includes almost all standard C++ libraries at once, saving typing time.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                It prevents the program from using too much memory.
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Nested Loops, Code Analysis
+        C++, CP Tricks, Includes
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **What is the time complexity of this loop?**
-    ```cpp
-    for (int i = 1; i < n; i *= 2) {
-        cout << i << "\n";
-    }
-    ```
+        **What punctuation mark MUST end almost every standard statement in C++?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        The loop variable $i$ doubles in every step instead of increasing by 1.
+        It acts as a full stop for code sentences.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        Because $i$ multiplies by 2 on each iteration, it reaches $n$ extremely fast. The number of iterations needed for $2^k$ to reach $n$ is $k = \log_2 N$. Thus, the time complexity is $O(\log N)$.
+        The semicolon `;` is the fundamental statement terminator in C++. Forgetting it is one of the most common compilation errors!
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(1)$
+                Colon `:`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(\log N)$
+                Semicolon `;`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N)$
+                Period `.`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N^2)$
+                Comma `,`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Logarithmic Complexity, Loops
+        C++, Syntax
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **If an algorithm checks every possible pair in an array of size $N$, what is its typical time complexity?**
+        **What is the fundamental difference between C and C++?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        How many pairs exist in an array of size $N$?
+        C++ was originally named "C with Classes".
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        The number of pairs in an array of size $N$ is roughly $N \times N / 2$. Since we ignore constants in Big O notation, the time complexity of checking every pair is $O(N^2)$.
+        C++ was originally called "C with Classes" and brought Object-Oriented Programming (OOP) features to the standard C procedural language.
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(1)$
+                C++ does not support loops.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(\log N)$
+                C is an Object-Oriented Language, while C++ is not.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N^2)$
+                C++ is an extension of C that supports Object-Oriented Programming (Classes and Objects).
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                C is faster than C++ in every scenario.
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Pairs, Combinatorics
+        C++, History, OOP
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **A C++ solution has $N = 10^5$ and uses an $O(N^2)$ algorithm for a 1-second time limit. Based on the $10^8$ operations rule, what is most likely to happen?**
+        **Which of the following is considered a single-line comment in C++?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        Calculate $(10^5)^2$ and compare it to the standard $10^8$ operations per second limit.
+        `/* */` is used for multi-line comments.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        An $O(N^2)$ algorithm for $N = 10^5$ will perform approximately $(10^5)^2 = 10^{10}$ operations. A standard C++ program performs roughly $10^8$ operations in 1 second. $10^{10}$ is much greater than $10^8$, so the program will receive a Time Limit Exceeded (TLE) error.
+        `//` is for single-line comments. Everything following `//` on that line is ignored by the compiler.
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                It will pass easily
+                `/* comment */`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                It will probably get Time Limit Exceeded (TLE)
+                `// comment`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                It will use no extra memory
+                `# comment`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                It will become $O(N \log N)$ automatically
+                `<!-- comment -->`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        TLE, Constraints, Magic Number
+        C++, Syntax, Comments
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **What is the time complexity of searching for a value in a sorted array using binary search?**
+        **Which stage of building a C++ program actually combines your compiled code with the standard library code to create an executable?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        Binary search cuts the search space in half at every step.
+        It "connects" different pieces of code together.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        Binary search repeatedly halves the number of elements it needs to search. This process of repeated halving leads to a time complexity of $O(\log N)$.
+        The Linker is responsible for linking your compiled object (`.o`) files with the external libraries to build the final executable (`.exe`).
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(1)$
+                The Preprocessor
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(\log N)$
+                The Compiler
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                The Linker
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N^2)$
+                The Execution Engine
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Binary Search, Logarithmic Complexity
+        C++, Compilation Process
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **In interviews, when someone asks for "space complexity", they usually mean:**
+        **True or False: Does whitespace (spaces, tabs, newlines) affect how the C++ compiler understands your code?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        Space complexity tracks the extra memory created specifically by your algorithm.
+        C++ relies on syntax punctuation (like semicolons and braces) rather than indentation to structure code.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        Space complexity refers to the auxiliary (extra) memory used by your algorithm, excluding the space taken by the inputs themselves.
+        C++ is generally free-form. It relies on semicolons and braces for structure, meaning extra spaces or newlines don't affect logic. However, spaces are still needed to separate keywords (like `int main`), and whitespace inside quotes changes string content.
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                The exact RAM size of the computer
+                Yes, indentation is strictly enforced like in Python.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                The number of input elements only
+                No, C++ completely ignores whitespace in all scenarios.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                The extra memory used by the algorithm (auxiliary space)
+                Generally no; C++ is free-form and ignores whitespace except where it separates keywords or appears inside string literals.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                The total runtime of the program
+                Yes, putting two spaces instead of one causes a compiler error.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Space Complexity, Auxiliary Space
+        C++, Syntax, Whitespace
     </MCQ_TAGS>
 </MCQ_WIDGET>

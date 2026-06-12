@@ -1,432 +1,427 @@
 <READING_WIDGET>
+# Functions Quiz
 
-# Time Complexity Quiz
+Test your understanding of organizing code into reusable blocks using Functions!
 
 </READING_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **What does time complexity describe?**
+        **If a function is designed to just print something and does NOT return a value, what should its return type be?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        Time complexity does not measure actual wall-clock time because that depends on hardware.
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        Time complexity describes how the runtime of an algorithm scales or grows relative to the size of the input. It is independent of the hardware running the code.
+        `void` literally translates to "nothing", indicating the function does its job without giving data back
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                The exact number of seconds a program takes to run
+                `null`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                How the runtime of an algorithm grows as input size increases
+                `empty`
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                `void`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                The amount of memory used by the input array
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                The number of lines in a program
+                `int`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Time Complexity, Big O, Basics
+        C++, Functions, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **Which time complexity is generally the fastest?**
+        **You write a helper function below `main()`. What will happen when you try to compile the code?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        Look for the complexity that implies the runtime doesn't change regardless of input size.
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        $O(1)$ means the runtime is constant and does not grow with the input size $N$. It is the fastest possible time complexity.
+        C++ compilers are sequential. If they see a function call before the function exists, they panic
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(1)$
+                It compiles perfectly.
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                The compiler throws an error because C++ reads from top to bottom and doesn't know the function exists yet.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N)$
+                The program crashes at runtime.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N \log N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N^2)$
+                The function gets ignored.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Big O, Complexity Order
+        C++, Functions, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **What is the simplified Big O complexity of $T(N) = 5N^2 + 100N + 20$?**
+        **How do you fix the issue described in Question 2, allowing you to keep the function definition below `main()`?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        In Big O notation, we drop constants and only keep the term that grows the fastest.
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        In Big O notation, we ignore constant multipliers and lower-order terms because for very large $N$, the highest degree term dominates the runtime. Thus, $5N^2 + 100N + 20$ simplifies to $O(N^2)$.
+        A prototype like `void helper();` tells the compiler "trust me, the details for this function will appear later"
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(5N^2 + 100N + 20)$
+                You cannot fix it; it must be moved above `main()`.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N^2 + N)$
+                You use an `#include` statement.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N^2)$
+                You place a **Function Prototype** (declaration) at the very top of the file before `main()`.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N)$
+                You rename the function to `main2()`.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Big O, Mathematical Simplification
+        C++, Functions, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **What is the time complexity of this code?**
+        **What happens when a local variable inside a function has the exact same name as a global variable?**
+    </MCQ_DESCRIPTION>
+    <MCQ_HINT>
+        Think critically about the concepts discussed in this module.
+    </MCQ_HINT>
+    <MCQ_EXPLANATION>
+        Variable Shadowing prioritizes the innermost, most local scope
+    </MCQ_EXPLANATION>
+    <MCQ_OPTIONS>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                The compiler throws a "Duplicate Name" error.
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                The two variables merge their values.
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                The local variable **shadows** the global variable, meaning the function will only use the local version while inside that block.
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                The global variable overwrites the local variable.
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+    </MCQ_OPTIONS>
+    <MCQ_TAGS>
+        C++, Functions, Quiz
+    </MCQ_TAGS>
+</MCQ_WIDGET>
+
+<MCQ_WIDGET>
+    <MCQ_DESCRIPTION>
+        **Look at this code. What will be printed?**
         ```cpp
-        for (int i = 0; i < n; i++) {
-            cout << arr[i] << "\n";
+        void updateScore(int s) {
+            s = s + 10;
+        }
+        int main() {
+            int s = 50;
+            updateScore(s);
+            cout << s;
+            return 0;
         }
         ```
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        The loop runs from 0 to $n-1$, incrementing by 1 each time.
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        The loop iterates exactly $N$ times. Inside the loop, printing takes $O(1)$ time. Thus, the total time complexity is $O(N)$.
+        It prints `50` because the original variable in `main` was never modified
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(1)$
+                `60`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(\log N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N)$
+                `50`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N^2)$
+                Compilation Error
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                `0`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Loops, Code Analysis
+        C++, Functions, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **What is the time complexity of this code?**
-        ```cpp
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                cout << i << " " << j << "\n";
-            }
-        }
-        ```
+        **Why did the code in Question 5 behave that way?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        Think about how many times the inner print statement runs relative to $n$.
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        The outer loop runs $N$ times. For every iteration of the outer loop, the inner loop also runs $N$ times. Therefore, the total number of iterations is $N \times N = N^2$, making the time complexity $O(N^2)$.
+        By default, arguments are passed by value (photocopies). If you wanted to modify the original, you would need to pass it by reference using `&`
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N)$
+                Because variables can only be modified inside `main()`.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N + N)$
+                Because the function `updateScore` didn't have a `return` statement.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N \log N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N^2)$
+                Because standard parameters are passed **by value**, meaning the function only modified a temporary *photocopy* of `s`, leaving the original untouched.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                Because the variables had the same name.
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Nested Loops, Code Analysis
+        C++, Functions, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **What is the time complexity of this loop?**
-    ```cpp
-    for (int i = 1; i < n; i *= 2) {
-        cout << i << "\n";
-    }
-    ```
+        **What is a "Function Prototype" in C++?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        The loop variable $i$ doubles in every step instead of increasing by 1.
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        Because $i$ multiplies by 2 on each iteration, it reaches $n$ extremely fast. The number of iterations needed for $2^k$ to reach $n$ is $k = \log_2 N$. Thus, the time complexity is $O(\log N)$.
+        Prototypes are essential if you want to organize your helper functions below `main()`
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(1)$
+                The very first function ever written in a program.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(\log N)$
+                A declaration at the top of the file (like `int add(int a, int b);`) that tells the compiler a function exists before its full definition is written.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N)$
+                A function that calls itself recursively.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N^2)$
+                A built-in standard library function.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Logarithmic Complexity, Loops
+        C++, Functions, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **If an algorithm checks every possible pair in an array of size $N$, what is its typical time complexity?**
+        **You have a `void` function. Can you still use the `return;` keyword inside it?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        How many pairs exist in an array of size $N$?
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        The number of pairs in an array of size $N$ is roughly $N \times N / 2$. Since we ignore constants in Big O notation, the time complexity of checking every pair is $O(N^2)$.
+        A bare `return;` simply acts as an emergency exit for `void` functions
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(1)$
+                No, `void` functions can never have a return statement.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(\log N)$
+                Yes, but it must return 0 (e.g., `return 0;`).
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N^2)$
+                Yes, using a bare `return;` is perfectly valid to stop the function early.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                Yes, but it will print a warning.
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Pairs, Combinatorics
+        C++, Functions, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **A C++ solution has $N = 10^5$ and uses an $O(N^2)$ algorithm for a 1-second time limit. Based on the $10^8$ operations rule, what is most likely to happen?**
+        **Which of the following is true about parameters passed to a standard C++ function?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        Calculate $(10^5)^2$ and compare it to the standard $10^8$ operations per second limit.
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        An $O(N^2)$ algorithm for $N = 10^5$ will perform approximately $(10^5)^2 = 10^{10}$ operations. A standard C++ program performs roughly $10^8$ operations in 1 second. $10^{10}$ is much greater than $10^8$, so the program will receive a Time Limit Exceeded (TLE) error.
+        The names of the parameters in the function definition are completely independent of the variable names you pass in from `main()`
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                It will pass easily
+                They are always passed by reference by default.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                It will probably get Time Limit Exceeded (TLE)
+                The function can rename the parameters to whatever it wants; they do not have to match the names in `main()`.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                It will use no extra memory
+                You can pass a maximum of 5 parameters to a single function.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                It will become $O(N \log N)$ automatically
+                Global variables must be passed as parameters to be accessed.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        TLE, Constraints, Magic Number
+        C++, Functions, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **What is the time complexity of searching for a value in a sorted array using binary search?**
+        **What happens if you define a function inside another function (e.g., placing a function definition inside `main`)?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        Binary search cuts the search space in half at every step.
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        Binary search repeatedly halves the number of elements it needs to search. This process of repeated halving leads to a time complexity of $O(\log N)$.
+        Unlike Python or JavaScript, standard C++ strictly forbids defining functions inside other functions. Use lambdas for that!
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(1)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(\log N)$
+                Standard C++ does not allow nested function definitions.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N)$
+                It becomes a private function.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N^2)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-    </MCQ_OPTIONS>
-    <MCQ_TAGS>
-        Binary Search, Logarithmic Complexity
-    </MCQ_TAGS>
-</MCQ_WIDGET>
-
-<MCQ_WIDGET>
-    <MCQ_DESCRIPTION>
-        **In interviews, when someone asks for "space complexity", they usually mean:**
-    </MCQ_DESCRIPTION>
-    <MCQ_HINT>
-        Space complexity tracks the extra memory created specifically by your algorithm.
-    </MCQ_HINT>
-    <MCQ_EXPLANATION>
-        Space complexity refers to the auxiliary (extra) memory used by your algorithm, excluding the space taken by the inputs themselves.
-    </MCQ_EXPLANATION>
-    <MCQ_OPTIONS>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                The exact RAM size of the computer
+                It runs perfectly.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                The number of input elements only
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                The extra memory used by the algorithm (auxiliary space)
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                The total runtime of the program
+                It automatically becomes a lambda function.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Space Complexity, Auxiliary Space
+        C++, Functions, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>

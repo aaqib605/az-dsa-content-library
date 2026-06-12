@@ -1,432 +1,421 @@
 <READING_WIDGET>
+# Conditional Statements Quiz
 
-# Time Complexity Quiz
+Test your understanding of branching logic and decision-making in C++!
 
 </READING_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **What does time complexity describe?**
+        **Which operator is used to check if two values are EXACTLY equal?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        Time complexity does not measure actual wall-clock time because that depends on hardware.
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        Time complexity describes how the runtime of an algorithm scales or grows relative to the size of the input. It is independent of the hardware running the code.
+        `=` assigns a value, `==` compares them
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                The exact number of seconds a program takes to run
+                `=`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                How the runtime of an algorithm grows as input size increases
+                `==`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                The amount of memory used by the input array
+                `===`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                The number of lines in a program
+                `!=`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Time Complexity, Big O, Basics
+        C++, Conditional Statements, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **Which time complexity is generally the fastest?**
+        **In a sequence of `if ... else if ... else`, how many blocks of code will be executed if multiple conditions are technically true?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        Look for the complexity that implies the runtime doesn't change regardless of input size.
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        $O(1)$ means the runtime is constant and does not grow with the input size $N$. It is the fastest possible time complexity.
+        An `if-else` ladder guarantees that *only* the first true block is executed, entirely skipping the rest
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(1)$
+                All of them.
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                Only the first one that evaluates to true.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N)$
+                Only the last one that evaluates to true.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N \log N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N^2)$
+                It will cause a compilation error.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Big O, Complexity Order
+        C++, Conditional Statements, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **What is the simplified Big O complexity of $T(N) = 5N^2 + 100N + 20$?**
+        **You need to check if a number `x` is between 10 and 20 (inclusive). Which is the correct syntax?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        In Big O notation, we drop constants and only keep the term that grows the fastest.
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        In Big O notation, we ignore constant multipliers and lower-order terms because for very large $N$, the highest degree term dominates the runtime. Thus, $5N^2 + 100N + 20$ simplifies to $O(N^2)$.
+        Chaining operators like `10 <= x <= 20` is syntactically legal but a massive logical trap in C++. C++ will evaluate `10 <= x` first into a `0` or `1`, and then check if that `0` or `1` is `<= 20`, which is always true! You must explicitly separate the conditions using the logical AND `&&` operator
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(5N^2 + 100N + 20)$
+                `if (10 <= x <= 20)`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N^2 + N)$
+                `if (x >= 10 and 20)`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N^2)$
+                `if (x >= 10 && x <= 20)`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N)$
+                `if (x >= 10 || x <= 20)`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Big O, Mathematical Simplification
+        C++, Conditional Statements, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **What is the time complexity of this code?**
+        **What does the Logical NOT operator `!` do?**
+    </MCQ_DESCRIPTION>
+    <MCQ_HINT>
+        Think critically about the concepts discussed in this module.
+    </MCQ_HINT>
+    <MCQ_EXPLANATION>
+        `!` simply reverses the boolean value. `!true` is `false`
+    </MCQ_EXPLANATION>
+    <MCQ_OPTIONS>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                It subtracts 1 from a variable.
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                It flips `true` to `false`, and `false` to `true`.
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                It checks if a variable is empty.
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                It ends the program immediately.
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+    </MCQ_OPTIONS>
+    <MCQ_TAGS>
+        C++, Conditional Statements, Quiz
+    </MCQ_TAGS>
+</MCQ_WIDGET>
+
+<MCQ_WIDGET>
+    <MCQ_DESCRIPTION>
+        **What is "Short-Circuiting" in C++?**
+    </MCQ_DESCRIPTION>
+    <MCQ_HINT>
+        Think critically about the concepts discussed in this module.
+    </MCQ_HINT>
+    <MCQ_EXPLANATION>
+        For example, in `A && B`, if `A` is false, C++ knows the whole expression is false and completely skips evaluating `B`
+    </MCQ_EXPLANATION>
+    <MCQ_OPTIONS>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                When an infinite loop crashes the program.
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                When the program skips the second half of an `&&` or `||` check because the overall result is already determined by the first half.
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                When `if` statements are nested too deeply.
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                A compilation error caused by missing curly braces.
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+    </MCQ_OPTIONS>
+    <MCQ_TAGS>
+        C++, Conditional Statements, Quiz
+    </MCQ_TAGS>
+</MCQ_WIDGET>
+
+<MCQ_WIDGET>
+    <MCQ_DESCRIPTION>
+        **In a `switch` statement, what happens if you forget to put a `break;` at the end of a `case`?**
+    </MCQ_DESCRIPTION>
+    <MCQ_HINT>
+        Think critically about the concepts discussed in this module.
+    </MCQ_HINT>
+    <MCQ_EXPLANATION>
+        Fall-through is a notorious bug. Always remember your `break;` statements in a switch!
+    </MCQ_EXPLANATION>
+    <MCQ_OPTIONS>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                The switch statement fails to compile.
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                It gracefully exits the switch block automatically.
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                "Fall-through" occurs: it will continue executing the code in the subsequent cases until it hits a `break` or the switch ends.
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                It causes an infinite loop.
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+    </MCQ_OPTIONS>
+    <MCQ_TAGS>
+        C++, Conditional Statements, Quiz
+    </MCQ_TAGS>
+</MCQ_WIDGET>
+
+<MCQ_WIDGET>
+    <MCQ_DESCRIPTION>
+        **What is the equivalent Ternary Operator for the following logic:**
         ```cpp
-        for (int i = 0; i < n; i++) {
-            cout << arr[i] << "\n";
-        }
+        int max_val;
+        if (a > b) max_val = a;
+        else max_val = b;
         ```
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        The loop runs from 0 to $n-1$, incrementing by 1 each time.
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        The loop iterates exactly $N$ times. Inside the loop, printing takes $O(1)$ time. Thus, the total time complexity is $O(N)$.
+        The ternary format is `condition ? true_value : false_value;`
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(1)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(\log N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N)$
+                `int max_val = a > b ? a : b;`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N^2)$
+                `int max_val = a > b : a ? b;`
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                `int max_val = (a > b) == a || b;`
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                `int max_val = ? a > b : a : b;`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Loops, Code Analysis
+        C++, Conditional Statements, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **What is the time complexity of this code?**
-        ```cpp
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                cout << i << " " << j << "\n";
-            }
-        }
-        ```
+        **What is the scope of a variable declared inside an `if` block?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        Think about how many times the inner print statement runs relative to $n$.
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        The outer loop runs $N$ times. For every iteration of the outer loop, the inner loop also runs $N$ times. Therefore, the total number of iterations is $N \times N = N^2$, making the time complexity $O(N^2)$.
+        Variables declared inside curly braces `{}` are strictly local to that block
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N)$
+                It is accessible anywhere in the program.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N + N)$
+                It is accessible anywhere within the `main()` function.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N \log N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N^2)$
+                It is destroyed as soon as the `if` block ends and cannot be accessed outside.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                It overwrites any global variables automatically.
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Nested Loops, Code Analysis
+        C++, Conditional Statements, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **What is the time complexity of this loop?**
-    ```cpp
-    for (int i = 1; i < n; i *= 2) {
-        cout << i << "\n";
-    }
-    ```
+        **Which of the following conditional checks will fail to compile?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        The loop variable $i$ doubles in every step instead of increasing by 1.
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        Because $i$ multiplies by 2 on each iteration, it reaches $n$ extremely fast. The number of iterations needed for $2^k$ to reach $n$ is $k = \log_2 N$. Thus, the time complexity is $O(\log N)$.
+        `=>` is not a valid C++ operator. The greater-than-or-equal operator is strictly `>=`
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(1)$
+                `if (a == 5 || b == 10)`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(\log N)$
+                `if (a == 5 && b == 10)`
+            </OPTION_BODY>
+            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
+        </OPTION_ITEM>
+        <OPTION_ITEM>
+            <OPTION_BODY>
+                `if (a => 5)`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N^2)$
+                `if (a >= 5)`
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Logarithmic Complexity, Loops
+        C++, Conditional Statements, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
 
 <MCQ_WIDGET>
     <MCQ_DESCRIPTION>
-        **If an algorithm checks every possible pair in an array of size $N$, what is its typical time complexity?**
+        **If you have an `if` statement without curly braces `{}`, how many lines of code belong to that `if` statement?**
     </MCQ_DESCRIPTION>
     <MCQ_HINT>
-        How many pairs exist in an array of size $N$?
+        Think critically about the concepts discussed in this module.
     </MCQ_HINT>
     <MCQ_EXPLANATION>
-        The number of pairs in an array of size $N$ is roughly $N \times N / 2$. Since we ignore constants in Big O notation, the time complexity of checking every pair is $O(N^2)$.
+        Omitting curly braces makes only the single next statement part of the `if`. This is a common source of bugs!
     </MCQ_EXPLANATION>
     <MCQ_OPTIONS>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(1)$
+                All indented lines directly below it.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                $O(\log N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N^2)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-    </MCQ_OPTIONS>
-    <MCQ_TAGS>
-        Pairs, Combinatorics
-    </MCQ_TAGS>
-</MCQ_WIDGET>
-
-<MCQ_WIDGET>
-    <MCQ_DESCRIPTION>
-        **A C++ solution has $N = 10^5$ and uses an $O(N^2)$ algorithm for a 1-second time limit. Based on the $10^8$ operations rule, what is most likely to happen?**
-    </MCQ_DESCRIPTION>
-    <MCQ_HINT>
-        Calculate $(10^5)^2$ and compare it to the standard $10^8$ operations per second limit.
-    </MCQ_HINT>
-    <MCQ_EXPLANATION>
-        An $O(N^2)$ algorithm for $N = 10^5$ will perform approximately $(10^5)^2 = 10^{10}$ operations. A standard C++ program performs roughly $10^8$ operations in 1 second. $10^{10}$ is much greater than $10^8$, so the program will receive a Time Limit Exceeded (TLE) error.
-    </MCQ_EXPLANATION>
-    <MCQ_OPTIONS>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                It will pass easily
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                It will probably get Time Limit Exceeded (TLE)
+                Exactly 1 line (the very next statement).
             </OPTION_BODY>
             <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                It will use no extra memory
+                Until a blank line is reached.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
         <OPTION_ITEM>
             <OPTION_BODY>
-                It will become $O(N \log N)$ automatically
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-    </MCQ_OPTIONS>
-    <MCQ_TAGS>
-        TLE, Constraints, Magic Number
-    </MCQ_TAGS>
-</MCQ_WIDGET>
-
-<MCQ_WIDGET>
-    <MCQ_DESCRIPTION>
-        **What is the time complexity of searching for a value in a sorted array using binary search?**
-    </MCQ_DESCRIPTION>
-    <MCQ_HINT>
-        Binary search cuts the search space in half at every step.
-    </MCQ_HINT>
-    <MCQ_EXPLANATION>
-        Binary search repeatedly halves the number of elements it needs to search. This process of repeated halving leads to a time complexity of $O(\log N)$.
-    </MCQ_EXPLANATION>
-    <MCQ_OPTIONS>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(1)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(\log N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N)$
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                $O(N^2)$
+                It will cause a compilation error.
             </OPTION_BODY>
             <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
         </OPTION_ITEM>
     </MCQ_OPTIONS>
     <MCQ_TAGS>
-        Binary Search, Logarithmic Complexity
-    </MCQ_TAGS>
-</MCQ_WIDGET>
-
-<MCQ_WIDGET>
-    <MCQ_DESCRIPTION>
-        **In interviews, when someone asks for "space complexity", they usually mean:**
-    </MCQ_DESCRIPTION>
-    <MCQ_HINT>
-        Space complexity tracks the extra memory created specifically by your algorithm.
-    </MCQ_HINT>
-    <MCQ_EXPLANATION>
-        Space complexity refers to the auxiliary (extra) memory used by your algorithm, excluding the space taken by the inputs themselves.
-    </MCQ_EXPLANATION>
-    <MCQ_OPTIONS>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                The exact RAM size of the computer
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                The number of input elements only
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                The extra memory used by the algorithm (auxiliary space)
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>1</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-        <OPTION_ITEM>
-            <OPTION_BODY>
-                The total runtime of the program
-            </OPTION_BODY>
-            <OPTION_IS_CORRECT>0</OPTION_IS_CORRECT>
-        </OPTION_ITEM>
-    </MCQ_OPTIONS>
-    <MCQ_TAGS>
-        Space Complexity, Auxiliary Space
+        C++, Conditional Statements, Quiz
     </MCQ_TAGS>
 </MCQ_WIDGET>
