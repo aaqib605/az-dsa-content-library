@@ -1,0 +1,60 @@
+<READING_WIDGET>
+## Let's Practice!
+
+Now it's time to put your skills to the test. Try solving the following problems:
+
+</READING_WIDGET>
+
+<EXTERNAL_WIDGET>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>1</RESOURCE_ID>
+    <RESOURCE_TITLE>Sum of Natural Numbers</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://www.geeksforgeeks.org/problems/reverse-coding2452/1</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>GFG</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>2</RESOURCE_ID>
+    <RESOURCE_TITLE>Sum of Natural Number Cubes</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://practice.geeksforgeeks.org/problems/sum-of-first-n-terms5843/1</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>GFG</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>3</RESOURCE_ID>
+    <RESOURCE_TITLE>Series GP</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://www.geeksforgeeks.org/problems/series-gp4646/1</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>GFG</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>4</RESOURCE_ID>
+    <RESOURCE_TITLE>Vanya and Cubes</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://codeforces.com/problemset/problem/492/A</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>CODEFORCES</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>5</RESOURCE_ID>
+    <RESOURCE_TITLE>Count Total Number of Colored Cells</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://leetcode.com/problems/count-total-number-of-colored-cells/description/</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>LEETCODE</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+</EXTERNAL_WIDGET>
