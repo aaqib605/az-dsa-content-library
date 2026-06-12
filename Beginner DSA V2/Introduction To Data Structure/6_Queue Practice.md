@@ -1,0 +1,110 @@
+<READING_WIDGET>
+## Let's Practice!
+
+Now it's time to put your skills to the test. Try solving the following problems:
+
+</READING_WIDGET>
+
+<EXTERNAL_WIDGET>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>1</RESOURCE_ID>
+    <RESOURCE_TITLE>Queue AZ101</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://maang.in/problems/Queue-AZ101-349</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>OTHER</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>2</RESOURCE_ID>
+    <RESOURCE_TITLE>Number of Recent Calls</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://leetcode.com/problems/number-of-recent-calls/</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>LEETCODE</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>3</RESOURCE_ID>
+    <RESOURCE_TITLE>Reverse first K of a Queue</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://www.geeksforgeeks.org/problems/reverse-first-k-elements-of-queue/1</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>GFG</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>4</RESOURCE_ID>
+    <RESOURCE_TITLE>Time Needed to Buy Tickets</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://leetcode.com/problems/time-needed-to-buy-tickets/description/</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>LEETCODE</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>5</RESOURCE_ID>
+    <RESOURCE_TITLE>Number of Students Unable to Eat Lunch</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>LEETCODE</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>6</RESOURCE_ID>
+    <RESOURCE_TITLE>Find the Winner of the Circular Game</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://leetcode.com/problems/find-the-winner-of-the-circular-game/description/</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>LEETCODE</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>7</RESOURCE_ID>
+    <RESOURCE_TITLE>Queue using 2 Stacks AZ101</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://maang.in/problems/Queue-using-2-Stacks-AZ101-350</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>OTHER</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>8</RESOURCE_ID>
+    <RESOURCE_TITLE>Implement Stack using Queues</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://leetcode.com/problems/implement-stack-using-queues/description</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>LEETCODE</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>9</RESOURCE_ID>
+    <RESOURCE_TITLE>Design Circular Queue</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://leetcode.com/problems/design-circular-queue/</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>LEETCODE</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>10</RESOURCE_ID>
+    <RESOURCE_TITLE>Dota2 Senate</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://leetcode.com/problems/dota2-senate/description/</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>LEETCODE</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+</EXTERNAL_WIDGET>

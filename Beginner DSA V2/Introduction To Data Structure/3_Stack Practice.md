@@ -1,0 +1,110 @@
+<READING_WIDGET>
+## Let's Practice!
+
+Now it's time to put your skills to the test. Try solving the following problems:
+
+</READING_WIDGET>
+
+<EXTERNAL_WIDGET>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>1</RESOURCE_ID>
+    <RESOURCE_TITLE>Stack AZ101</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://maang.in/problems/Stack-AZ101-347</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>OTHER</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>2</RESOURCE_ID>
+    <RESOURCE_TITLE>Valid Parentheses</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://leetcode.com/problems/valid-parentheses/</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>LEETCODE</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>3</RESOURCE_ID>
+    <RESOURCE_TITLE>Valid Parentheses AZ101</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://maang.in/problems/Valid-Parentheses-AZ101-348</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>OTHER</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>4</RESOURCE_ID>
+    <RESOURCE_TITLE>Reverse each word in a given string</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://www.geeksforgeeks.org/problems/reverse-each-word-in-a-given-string1001/1</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>GFG</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>5</RESOURCE_ID>
+    <RESOURCE_TITLE>Maximum Nesting Depth of the Parentheses</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/description/</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>LEETCODE</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>6</RESOURCE_ID>
+    <RESOURCE_TITLE>Final Prices With a Special Discount in a Shop</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/description/</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>LEETCODE</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>7</RESOURCE_ID>
+    <RESOURCE_TITLE>Implement stack using array</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://www.geeksforgeeks.org/problems/implement-stack-using-array/1</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>GFG</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>8</RESOURCE_ID>
+    <RESOURCE_TITLE>Postfix to Prefix Conversion</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://www.geeksforgeeks.org/problems/postfix-to-prefix-conversion/1</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>GFG</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>9</RESOURCE_ID>
+    <RESOURCE_TITLE>Infix-Postfix</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://maang.in/problems/InfixPostfix-393</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>OTHER</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>10</RESOURCE_ID>
+    <RESOURCE_TITLE>Strong Elements</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://maang.in/problems/Strong-Elements-1059</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>OTHER</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+</EXTERNAL_WIDGET>
