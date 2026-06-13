@@ -1,6 +1,6 @@
 <VIDEO_WIDGET>
 
-<VIDEO_ID></VIDEO_ID> <!-- Required -->
+<VIDEO_ID>3443</VIDEO_ID> <!-- Required -->
 
 </VIDEO_WIDGET>
 
@@ -9,9 +9,9 @@
 # Pointers and References: DSA Preview
 
 In the world of standard programming, you work with variables. But under the hood, those variables are just slots in your computer's memory (RAM).
-If you want to master Data Structures and Algorithms (like Linked Lists and Trees), you cannot just work with the *values* inside those slots—you must learn to manipulate the slots themselves.
+If you want to master Data Structures and Algorithms (like Linked Lists and Trees), you cannot just work with the _values_ inside those slots—you must learn to manipulate the slots themselves.
 
-> 💡 **Interview Insight:** In pure competitive programming, you rarely write raw pointers (we usually simulate trees with arrays for speed). However, in Software Engineering interviews, **raw pointers are mandatory**. While you might not use them in a Codeforces math problem, you *will* use them in almost every single Google or Amazon interview involving Linked Lists or Trees!
+> 💡 **Interview Insight:** In pure competitive programming, you rarely write raw pointers (we usually simulate trees with arrays for speed). However, in Software Engineering interviews, **raw pointers are mandatory**. While you might not use them in a Codeforces math problem, you _will_ use them in almost every single Google or Amazon interview involving Linked Lists or Trees!
 
 Welcome to the foundation of C++ memory management.
 
@@ -19,7 +19,8 @@ Welcome to the foundation of C++ memory management.
 
 ## 1. What is an Address?
 
-Imagine a street full of houses. 
+Imagine a street full of houses.
+
 - The **Value** is the person living inside the house (e.g., `42`).
 - The **Variable Name** is the nickname you gave the house (e.g., `score`).
 - The **Address** is the literal, physical GPS location of the house in your computer's memory (e.g., `0x7ffee21a`).
@@ -59,35 +60,35 @@ cout << original << "\n"; // Outputs 500! The original was changed.
 
 ### Pass by Value vs. Pass by Reference
 
-By default, C++ passes arguments **by value**. This means it creates a completely independent *photocopy* of the variable. Modifying the photocopy does nothing to the original.
+By default, C++ passes arguments **by value**. This means it creates a completely independent _photocopy_ of the variable. Modifying the photocopy does nothing to the original.
 However, when dealing with massive data structures like a `vector` of 100,000 items, creating a photocopy takes way too much time and memory (and often causes Time Limit Exceeded errors)!
 
-If you pass it **by reference** using `&`, C++ just passes the "nickname" to the *original* vector.
+If you pass it **by reference** using `&`, C++ just passes the "nickname" to the _original_ vector.
 
 ```cpp
 // ❌ Pass by Value (Slow! Creates a massive copy. Original is NOT modified.)
-void addTen_Value(vector<int> v) { 
+void addTen_Value(vector<int> v) {
     for(int i = 0; i < v.size(); i++) {
         v[i] += 10;
     }
 }
 
 // ✅ Pass by Reference (Lightning Fast! Directly modifies the original.)
-void addTen_Reference(vector<int>& v) { 
+void addTen_Reference(vector<int>& v) {
     for(int i = 0; i < v.size(); i++) {
         v[i] += 10;
     }
 }
 ```
 
-> 💡 **The "Read-Only" Speed Hack:** What if you want to pass a massive vector quickly, but you want to guarantee it *cannot* be modified by accident? Use a `const` reference! (e.g., `void printVector(const vector<int>& v)`). This is the industry standard for passing heavy read-only data safely!
+> 💡 **The "Read-Only" Speed Hack:** What if you want to pass a massive vector quickly, but you want to guarantee it _cannot_ be modified by accident? Use a `const` reference! (e.g., `void printVector(const vector<int>& v)`). This is the industry standard for passing heavy read-only data safely!
 
 ---
 
 ## 3. Pointers (The Treasure Map)
 
 If a Reference is a nickname, a **Pointer** is a physical piece of paper that holds an address (a treasure map).
-A pointer is an entirely separate variable whose only job is to store the memory address of *another* variable.
+A pointer is an entirely separate variable whose only job is to store the memory address of _another_ variable.
 
 You declare a pointer using an asterisk (`*`).
 
@@ -95,7 +96,7 @@ You declare a pointer using an asterisk (`*`).
 int score = 42;
 
 // Create a pointer named 'ptr' that stores the address of 'score'
-int* ptr = &score; 
+int* ptr = &score;
 
 cout << "The map points to location: " << ptr << "\n";
 ```
@@ -111,7 +112,7 @@ You use the **Dereference operator (`*`)**.
 
 ```cpp
 int score = 42;
-int* ptr = &score; 
+int* ptr = &score;
 
 // Follow the map to get the value
 cout << "The treasure is: " << *ptr << "\n"; // Outputs 42
@@ -122,7 +123,8 @@ cout << "The treasure is: " << *ptr << "\n"; // Outputs 42
 cout << "New score is: " << score << "\n"; // Outputs 99
 ```
 
-> ⚠️ **Warning:** The asterisk `*` has two totally different jobs. 
+> ⚠️ **Warning:** The asterisk `*` has two totally different jobs.
+>
 > 1. In a declaration (`int* ptr`), it means "create a pointer variable."
 > 2. In front of an existing pointer (`*ptr = 99`), it means "go to the address and get the value."
 
@@ -130,7 +132,7 @@ cout << "New score is: " << score << "\n"; // Outputs 99
 
 ## 5. `nullptr` (The Map to Nowhere)
 
-Sometimes you create a pointer but you don't have an address to give it yet. 
+Sometimes you create a pointer but you don't have an address to give it yet.
 If you leave it uninitialized, it will point to a random, garbage location in memory, which is highly dangerous.
 
 Always initialize empty pointers to `nullptr` (a safe "nowhere").
@@ -152,6 +154,7 @@ if (safePtr != nullptr) {
 ## 6. Value vs. Reference vs. Pointer (Summary)
 
 To keep it crystal clear:
+
 1. **Pass by Value (`int x`):** Here is a photocopy of my document. Do whatever you want to it, my original is safe.
 2. **Pass by Reference (`int& x`):** Here is my original document. We are both looking at the exact same piece of paper.
 3. **Pointer (`int* ptr`):** Here is a sticky note with the GPS coordinates of where my document is stored. Go find it yourself.

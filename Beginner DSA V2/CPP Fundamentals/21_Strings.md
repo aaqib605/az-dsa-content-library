@@ -1,6 +1,6 @@
 <VIDEO_WIDGET>
 
-<VIDEO_ID></VIDEO_ID> <!-- Required -->
+<VIDEO_ID>3440</VIDEO_ID> <!-- Required -->
 
 </VIDEO_WIDGET>
 
@@ -8,7 +8,7 @@
 
 # Strings
 
-You now know how to store a collection of numbers using arrays. But what if you want to store a word or a sentence, like `"AlgoZenith"`? 
+You now know how to store a collection of numbers using arrays. But what if you want to store a word or a sentence, like `"AlgoZenith"`?
 Technically, a word is just a collection (array) of single characters (`char`).
 
 In C++, instead of forcing you to make an `array of chars`, we have a much more powerful and flexible tool: **The `string`**.
@@ -37,6 +37,7 @@ int main() {
 ## 2. Input and Output
 
 ### Basic Input (`cin`)
+
 Using `cin` with a string will read a **single word**. It stops reading the moment it hits a space or a new line.
 
 ```cpp
@@ -46,12 +47,13 @@ cout << name;
 ```
 
 ### Reading a Full Sentence (`getline`)
+
 If you want to read an entire line of text (including the spaces), you use the `getline()` function.
 
 ```cpp
 string fullName;
 // Reads the whole line until you press Enter
-getline(cin, fullName); 
+getline(cin, fullName);
 cout << fullName; // Prints "Vivek Gupta" perfectly!
 ```
 
@@ -62,6 +64,7 @@ cout << fullName; // Prints "Vivek Gupta" perfectly!
 Strings behave exactly like arrays under the hood. They use **0-based indexing**, meaning the first character is at index `0`.
 
 ### Finding the Length
+
 You can find out how many characters are in a string using `.length()` or `.size()`.
 
 ```cpp
@@ -70,6 +73,7 @@ cout << "Length: " << s.length() << "\n"; // Prints 5
 ```
 
 ### Accessing and Updating Characters
+
 You can read or change individual characters using square brackets `[]`, just like an array!
 
 ```cpp
@@ -77,7 +81,7 @@ string fruit = "Apple";
 cout << fruit[0]; // Prints 'A'
 
 // Let's modify the string!
-fruit[0] = 'a'; 
+fruit[0] = 'a';
 cout << fruit; // Prints "apple"
 ```
 
@@ -90,6 +94,7 @@ cout << fruit; // Prints "apple"
 Since strings are basically arrays, we can loop through them to look at each character one by one.
 
 ### Using a Standard `for` Loop
+
 ```cpp
 string s = "Code";
 for (int i = 0; i < s.length(); i++) {
@@ -99,6 +104,7 @@ for (int i = 0; i < s.length(); i++) {
 ```
 
 ### Using the Range-Based `for` Loop
+
 If you just want to read the characters without caring about their index, this is the cleanest way:
 
 ```cpp
@@ -135,6 +141,7 @@ if (s1 == s2) {
 ## 6. Basic String Operations
 
 ### Concatenation (Adding Strings Together)
+
 You can easily glue strings together using the `+` operator.
 
 ```cpp
@@ -146,6 +153,7 @@ combined += "!";       // "AlgoZenith!"
 ```
 
 ### Substrings
+
 You can extract a smaller piece of a string using `.substr(starting_index, length)`.
 
 ```cpp

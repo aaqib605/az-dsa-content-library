@@ -1,6 +1,6 @@
 <VIDEO_WIDGET>
 
-<VIDEO_ID></VIDEO_ID> <!-- Required -->
+<VIDEO_ID>3438</VIDEO_ID> <!-- Required -->
 
 </VIDEO_WIDGET>
 
@@ -8,19 +8,20 @@
 
 # Functions: Just Enough to Organize Code
 
-As the problems you solve get harder, your `main()` function will start getting longer and messier. 
+As the problems you solve get harder, your `main()` function will start getting longer and messier.
 Imagine writing a 500-line program where everything is stuffed inside `main()`. If there's a bug, finding it will be a nightmare!
 
-To keep our code clean, readable, and reusable, we use **Functions**. 
+To keep our code clean, readable, and reusable, we use **Functions**.
 
 ---
 
 ## 1. Why are Functions Useful?
 
-Think of a function as a **mini-program** or a **machine**. 
+Think of a function as a **mini-program** or a **machine**.
 You give the machine some raw materials (Inputs), the machine does a specific job, and it hands you back a finished product (Output).
 
 **Benefits:**
+
 - **Reusability (DRY - Don't Repeat Yourself):** Write the logic once, use it 100 times.
 - **Readability:** `int mx = findMax(a, b);` is much easier to read than writing the comparison logic repeatedly.
 - **Debugging:** If finding the maximum is broken, you only have to fix the `findMax` function, not 50 different places in your code.
@@ -32,6 +33,7 @@ You give the machine some raw materials (Inputs), the machine does a specific jo
 ## 2. Function Syntax
 
 To build a function in C++, you need to define three main things:
+
 1. **Return Type:** What kind of data will this machine give back? (e.g., `int`, `bool`, `string`)
 2. **Name:** What is the machine called?
 3. **Parameters:** What raw materials does it need to do its job?
@@ -48,7 +50,7 @@ int addNumbers(int a, int b) {
 
 ## 3. Parameters and Return Values
 
-Let's look at how we actually *use* (or **call**) the function we just created.
+Let's look at how we actually _use_ (or **call**) the function we just created.
 
 ```cpp
 #include <iostream>
@@ -61,17 +63,17 @@ int addNumbers(int a, int b) {
 
 int main() {
     // Calling the function and storing the result
-    int result = addNumbers(10, 5); 
+    int result = addNumbers(10, 5);
     cout << "The sum is: " << result << "\n";
-    
+
     // You can call it as many times as you want!
     cout << "Another sum: " << addNumbers(100, 200) << "\n";
-    
+
     return 0;
 }
 ```
 
-> 💡 **Pro Tip:** What if you *really* want to write your function below `main()`? You can use a **Function Prototype**! Just write the function's declaration (like `int addNumbers(int a, int b);`) at the very top of your file to warn the compiler that the function exists, and then write the actual body below `main()`.
+> 💡 **Pro Tip:** What if you _really_ want to write your function below `main()`? You can use a **Function Prototype**! Just write the function's declaration (like `int addNumbers(int a, int b);`) at the very top of your file to warn the compiler that the function exists, and then write the actual body below `main()`.
 
 ---
 
@@ -95,8 +97,8 @@ int main() {
 
 ## 5. Local Variables
 
-A critical concept to understand is **Scope**. 
-Variables created *inside* a function are **Local Variables**. They only exist while that specific function is running. Once the function finishes, those variables are destroyed. 
+A critical concept to understand is **Scope**.
+Variables created _inside_ a function are **Local Variables**. They only exist while that specific function is running. Once the function finishes, those variables are destroyed.
 
 The `main()` function cannot see variables created inside `addNumbers()`, and vice versa!
 
@@ -145,14 +147,14 @@ bool isPrime(int n) {
 int main() {
     int number;
     cin >> number;
-    
+
     // Look how clean main() is!
     if (isPrime(number)) {
         cout << "Yes, it is a prime number.\n";
     } else {
         cout << "No, it is not prime.\n";
     }
-    
+
     return 0;
 }
 ```

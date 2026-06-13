@@ -1,6 +1,6 @@
 <VIDEO_WIDGET>
 
-<VIDEO_ID></VIDEO_ID> <!-- Required -->
+<VIDEO_ID>3444</VIDEO_ID> <!-- Required -->
 
 </VIDEO_WIDGET>
 
@@ -10,7 +10,7 @@
 
 In the previous modules, we learned about **Static Arrays**. They are incredibly fast and efficient, but they have one massive flaw: **their size is fixed**.
 
-If you create an array `int arr[10];`, it can *never* hold 11 items. But what if you are reading data from a user and you don't know how many numbers they will enter until the program is already running? 
+If you create an array `int arr[10];`, it can _never_ hold 11 items. But what if you are reading data from a user and you don't know how many numbers they will enter until the program is already running?
 
 Enter **`vector`**: The Dynamic Array.
 
@@ -18,7 +18,8 @@ Enter **`vector`**: The Dynamic Array.
 
 ## 1. Why `vector` Exists
 
-A `vector` is a "smart" array that can **grow and shrink automatically** as needed. 
+A `vector` is a "smart" array that can **grow and shrink automatically** as needed.
+
 - You don't need to know the size in advance.
 - You can keep adding elements to it, and it will magically allocate more memory behind the scenes.
 - In Competitive Programming, vectors are the absolute standard. You will use them in almost every problem!
@@ -41,7 +42,7 @@ vector<int> v;
 vector<string> names;
 
 // Creates a vector of size 5, with all elements initialized to 0
-vector<int> v2(5, 0); 
+vector<int> v2(5, 0);
 
 // Initializer List: Creates a vector with hardcoded values
 vector<int> primes = {2, 3, 5, 7};
@@ -68,9 +69,11 @@ v.push_back(30); // v now contains: [10, 20, 30]
 ## 4. Size and Indexing
 
 ### `.size()`
+
 To find out how many elements are currently inside your vector, use the `.size()` function.
 
 ### Indexing (`[ ]`)
+
 Just like static arrays, vectors are **0-indexed**. You can access or modify elements using square brackets `[ ]`.
 
 ```cpp
@@ -88,7 +91,7 @@ cout << "Last element: " << v[2] << "\n";  // Output: 30
 v[1] = 99; // The vector is now [10, 99, 30]
 ```
 
-> ⚠️ **Warning:** You cannot use `v[i]` to *add* a new element if that index doesn't exist yet! If `v` is empty, doing `v[0] = 5;` will cause a Segmentation Fault (Crash). You **must** use `push_back()` to add new elements!
+> ⚠️ **Warning:** You cannot use `v[i]` to _add_ a new element if that index doesn't exist yet! If `v` is empty, doing `v[0] = 5;` will cause a Segmentation Fault (Crash). You **must** use `push_back()` to add new elements!
 
 ### Other Essential Vector Methods
 
@@ -117,6 +120,7 @@ v.clear(); // Vector is now completely empty!
 There are two common ways to take input for a vector.
 
 ### Method A: Pushing elements one by one
+
 If you create an empty vector, you must read the value into a temporary variable, then push it.
 
 ```cpp
@@ -132,6 +136,7 @@ for (int i = 0; i < n; i++) {
 ```
 
 ### Method B: Pre-allocating size (Faster)
+
 If you know the size `n` immediately, it is better to create a vector of size `n` and use `cin` directly with indexing.
 
 ```cpp
@@ -143,7 +148,7 @@ vector<int> v(n);
 
 // Now we can safely use indexing!
 for (int i = 0; i < n; i++) {
-    cin >> v[i]; 
+    cin >> v[i];
 }
 ```
 
@@ -161,6 +166,6 @@ for (int x : v) {
 cout << "\n";
 ```
 
-*(You can also use a standard `for (int i = 0; i < v.size(); i++)` loop if you need the index `i` for your logic!)*
+_(You can also use a standard `for (int i = 0; i < v.size(); i++)` loop if you need the index `i` for your logic!)_
 
 </READING_WIDGET>

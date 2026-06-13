@@ -1,6 +1,6 @@
 <VIDEO_WIDGET>
 
-<VIDEO_ID></VIDEO_ID> <!-- Required -->
+<VIDEO_ID>3436</VIDEO_ID> <!-- Required -->
 
 </VIDEO_WIDGET>
 
@@ -8,8 +8,8 @@
 
 # Conditional Statements
 
-Up until now, your code has run sequentially: line 1, then line 2, then line 3. But real-world problems require **decisions**. 
-What if you only want to print "Even" if a number is divisible by 2? What if you want to give a discount only if the user is a VIP? 
+Up until now, your code has run sequentially: line 1, then line 2, then line 3. But real-world problems require **decisions**.
+What if you only want to print "Even" if a number is divisible by 2? What if you want to give a discount only if the user is a VIP?
 
 This is where **Conditional Statements** come into play!
 
@@ -30,7 +30,7 @@ if (score >= 80) {
 
 ## 2. The `else` Statement
 
-What if you want to do something when the condition is *not* met? You use the `else` statement. It acts as a fallback or a default action.
+What if you want to do something when the condition is _not_ met? You use the `else` statement. It acts as a fallback or a default action.
 
 ```cpp
 int age = 16;
@@ -67,14 +67,14 @@ if (marks >= 90) {
 
 ## 4. Nested Conditions
 
-You can place `if` statements *inside* other `if` statements. This is called nesting, and it's used when a decision depends on a previous decision.
+You can place `if` statements _inside_ other `if` statements. This is called nesting, and it's used when a decision depends on a previous decision.
 
 ```cpp
 int number = 10;
 
 if (number > 0) {
     cout << "The number is positive.\n";
-    
+
     // Nested check
     if (number % 2 == 0) {
         cout << "It is also an even number.\n";
