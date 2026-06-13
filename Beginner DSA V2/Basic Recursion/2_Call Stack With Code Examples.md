@@ -6,73 +6,13 @@
 
 <READING_WIDGET>
 
-# Basic Recursion
-
-Hey there! Have you ever looked at two mirrors facing each other and seen an infinite tunnel of reflections? That's recursion in real life! In programming, recursion is one of the most powerful and elegant techniques you can learn. If you can master recursion, you're halfway to mastering Data Structures and Algorithms.
-
-Let's demystify recursion step by step so you can start thinking recursively!
-
-## What is Recursion?
-
-At its core, **recursion is simply a function that calls itself** to solve smaller instances of the same problem. 
-
-Think of a large task, like eating a giant pizza. You don't eat it all at once; you take a bite, and then what's left is a slightly smaller pizza. You repeat the process (take a bite, get a smaller pizza) until the pizza is gone. Recursion works exactly the same way.
-
-> 💡 **Interview Insight:** Many advanced topics like Trees, Graphs, and Dynamic Programming rely heavily on recursion. If you can't confidently trace a recursive function, you'll struggle in DSA interviews. Spend extra time building your intuition here!
-
-<img src="https://d3pdqc0wehtytt.cloudfront.net/media/9651/c15f429e-4a7a-4038-9db2-b0d92c5ec0d4.png" alt="Recursion Tree" style="max-width: 100%; height: auto;" identifier="az-img-upload">
-
----
-
-## Function Calling Itself
-
-Let's look at a simple example of a function calling itself in C++:
-
-```cpp
-void sayHello() {
-    cout << "Hello!\n";
-    sayHello(); // The function calls itself!
-}
-```
-
-If you run this code, it will print "Hello!" over and over again until your program crashes. Why? Because we didn't tell it when to stop! This is called **infinite recursion**, and it's the recursive equivalent of an infinite loop.
-
-To prevent this, every recursive function needs two crucial parts: the **Base Case** and the **Recursive Case**.
-
----
-
-## The Base Case and Recursive Case
-
-### The Base Case (How recursive calls stop)
-The base case is the condition under which the function **stops** calling itself. It prevents the infinite loop and tells the recursion when the task is small enough to be solved directly.
-
-### The Recursive Case
-The recursive case is the part of the function where it actually calls itself, breaking the main problem into a smaller, simpler sub-problem.
-
-Let's write a function to print "Hello" exactly 3 times using these concepts:
-
-```cpp
-void sayHello(int times) {
-    // 1. Base Case: Stop when there are no more times left
-    if (times == 0) {
-        return; // **RETURN to stop the recursion!**
-    }
-    
-    // 2. Do the work for the current step
-    cout << "Hello!\n";
-    
-    // 3. Recursive Case: Call the function with a smaller problem
-    sayHello(times - 1); 
-}
-```
-
-When we call `sayHello(3)`, it works perfectly. But how exactly does the computer keep track of this?
-
----
+# The Call Stack
 
 ## Call Stack Intuition
 
-To understand recursion, you must understand the **Call Stack**. The call stack is like a stack of plates. When you call a function, the computer puts a new "plate" (a memory frame) on top of the stack. When the function finishes, the computer takes that "plate" off.
+In the previous lesson, we learned that a recursive function calls itself to solve smaller sub-problems. But how exactly does the computer keep track of all these nested function calls? 
+
+To understand recursion deeply, you must understand the **Call Stack**. The call stack is like a stack of plates. When you call a function, the computer puts a new "plate" (a memory frame) on top of the stack. When the function finishes, the computer takes that "plate" off.
 
 <img src="https://d3pdqc0wehtytt.cloudfront.net/media/9651/01ea6f38-1fab-40c6-82cf-e85e8ca3d8cc.png" alt="Recursion Call Stack" style="max-width: 100%; height: auto;" identifier="az-img-upload">
 
@@ -177,40 +117,5 @@ Once you understand how the recursion builds up, you can express its time comple
 This gives us a **Recurrence Relation**: 
 $$T(N) = T(N-1) + O(1)$$
 Because we do an $O(1)$ operation $N$ times, this relation simplifies to a final Time Complexity of $O(N)$.
-
----
-
-## Simple Recursion with Arrays/Strings
-
-Recursion isn't just for math; it's great for data structures too! Let's say we want to find the sum of all elements in an array.
-
-We can think of the sum of an array as:
-`Sum = (First Element) + Sum of the (Rest of the Array)`
-
-```cpp
-// BEST PRACTICE: Passing vector by reference!
-int getArraySum(vector<int>& arr, int index) {
-    // Base Case: If index reaches the size of the array, return 0
-    if (index == arr.size()) {
-        return 0; // **RETURN base case**
-    }
-    
-    // Recursive Case: Current element + Sum of the remaining elements
-    return arr[index] + getArraySum(arr, index + 1);
-}
-```
-
-> 🚨 **CRITICAL C++ TRAP: Forgetting the `&` (Pass-by-Value)**
-> In the code above, we correctly passed the vector **by reference** using `vector<int>& arr`. What happens if you forget the `&` and pass it **by value** (`vector<int> arr`)? 
-> 
-> *Every single time* the function calls itself, it will create a brand new deep copy of the entire vector! 
-> - **Time Complexity:** Silently degrades from $O(N)$ to $O(N^2)$ (copying $N$ elements, $N$ times).
-> - **Space Complexity:** Becomes an $O(N^2)$ Memory Limit Exceeded (MLE) disaster!
-> 
-> **The Takeaway:** Always pass large data structures like `std::vector` or `std::string` by reference to keep the space complexity at $O(N)$ for the call stack with no extra copying overhead!
-
-To call this function, we would use `getArraySum(arr, 0)` starting at index 0. 
-
-You can apply the exact same logic to strings. For example, to reverse a string or check if it's a palindrome, you compare the outer characters and recursively check the inner substring.
 
 </READING_WIDGET>
