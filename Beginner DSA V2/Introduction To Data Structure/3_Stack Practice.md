@@ -70,8 +70,8 @@ Now it's time to put your skills to the test. Try solving the following problems
 <RESOURCE_ITEM>
 
     <RESOURCE_ID>7</RESOURCE_ID>
-    <RESOURCE_TITLE>Implement stack using array</RESOURCE_TITLE>
-    <RESOURCE_LINK>https://www.geeksforgeeks.org/problems/implement-stack-using-array/1</RESOURCE_LINK>
+    <RESOURCE_TITLE>Delete Mid of a Stack</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://www.geeksforgeeks.org/problems/delete-middle-element-of-a-stack/1</RESOURCE_LINK>
     <RESOURCE_PLATFORM>GFG</RESOURCE_PLATFORM>
     <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
 
