@@ -163,4 +163,8 @@ bool isValid(string s) {
 }
 ```
 
+---
+
+> 🚀 **Next Up:** You've mastered the Stack's Last-In-First-Out behavior. But what if we want to process things fairly, in the exact order they arrived? Let's turn our attention to the **Queue**!
+
 </READING_WIDGET>

@@ -6,7 +6,7 @@
 
 <READING_WIDGET>
 
-# Implementing a Stack: Arrays vs. Linked Lists
+# Implementing a Stack Using an Array
 
 Imagine a stack of heavy cafeteria trays. You can only add a new tray to the **top** of the stack, and you can only take a tray off from the **top**. You can't just magically pull out the third tray from the bottom without causing a massive crash!
 
@@ -16,7 +16,6 @@ While the *concept* of a stack is universal, we can build it under the hood usin
 
 ---
 
-## 1. Implementing a Stack Using an Array
 
 The easiest way to build a stack is by using a standard Array. We just need to keep track of a `top` variable that points to the index of the highest element.
 
@@ -89,86 +88,6 @@ public:
 
 ---
 
-## 2. Implementing a Stack Using a Linked List
-
-What if you don't know exactly how big your stack needs to be, and you don't want to use an array? You can implement a stack using a **Singly Linked List**!
-
-In this approach, the `head` of the linked list acts as the `top` of the stack. Every time you push an element, you simply insert a new node at the *front* of the list. Every time you pop, you delete the node at the *front*.
-
-### Why use a Linked List?
-- **No strict capacity limits**: It grows dynamically as long as your computer has free memory. You never have to worry about a "Stack Overflow" due to an arbitrary fixed capacity limit!
-- **Fast operations**: Because we only ever add or remove from the `head` (the top), every operation is strictly `O(1)` time complexity.
-
-### Code Implementation (Linked List)
-
-```cpp
-#include <iostream>
-using namespace std;
-
-// Defining the Linked List Node
-class Node {
-public:
-    int data;
-    Node* next;
-    
-    Node(int x) {
-        data = x;
-        next = nullptr;
-    }
-};
-
-class LinkedListStack {
-    Node* top;  // Pointer to the top of the stack (the head of the list)
-    int count;  // To keep track of the current size
-    
-public:
-    LinkedListStack() {
-        top = nullptr;
-        count = 0;
-    }
-
-    // Push: Insert at the front of the linked list
-    void push(int x) {
-        Node* temp = new Node(x);
-        temp->next = top;
-        top = temp;
-        count++;
-    }
-
-    // Pop: Remove from the front of the linked list
-    int pop() {
-        if (top == nullptr) {
-            cout << "Stack Underflow!\n";
-            return -1;
-        }
-        Node* temp = top;
-        top = top->next;
-        int val = temp->data;
-        
-        delete temp; // Free memory!
-        count--;
-        return val;
-    }
-
-    // Peek: Look at the front element
-    int peek() {
-        if (top == nullptr) {
-            cout << "Stack is Empty\n";
-            return -1;
-        }
-        return top->data;
-    }
-
-    bool isEmpty() {
-        return top == nullptr;
-    }
-
-    int size() {
-        return count;
-    }
-};
-```
-
-> 💡 **Core Insight:** If you just need a simple, incredibly fast stack and know the maximum size in advance, an **Array Stack** is incredibly CPU cache-friendly and performant. But if your data size is unpredictable and highly volatile, a **Linked List Stack** provides perfect dynamic memory management without any resizing overhead!
+> 🚀 **Next Up:** Our Array-based Stack is incredibly fast, but its fixed capacity makes it dangerously rigid. Let's solve the dreaded "Stack Overflow" by **Implementing a Stack using a Dynamic Linked List**!
 
 </READING_WIDGET>

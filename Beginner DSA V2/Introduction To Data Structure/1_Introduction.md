@@ -54,4 +54,8 @@ You cannot simply traverse these structures in a single straight line.
 
 > 💡 **CP Insight:** Non-linear data structures are what separate beginners from advanced programmers. Mastering Trees and Graphs unlocks the ability to solve massive, complex pathfinding and hierarchical problems.
 
+---
+
+> 🚀 **Next Up:** Now that you have a bird's-eye view of how we organize data, it's time to dive into our very first structured container: the **Stack**! Let's see how this Last-In-First-Out structure works.
+
 </READING_WIDGET>
