@@ -1,0 +1,100 @@
+<READING_WIDGET>
+## Let's Practice!
+
+Now it's time to put your skills to the test. Try solving the following problems:
+
+</READING_WIDGET>
+
+<EXTERNAL_WIDGET>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>1</RESOURCE_ID>
+    <RESOURCE_TITLE>Minimum Time Visiting All Points</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://leetcode.com/problems/minimum-time-visiting-all-points/</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>LEETCODE</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>2</RESOURCE_ID>
+    <RESOURCE_TITLE>Escape The Ghosts</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://leetcode.com/problems/escape-the-ghosts/</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>LEETCODE</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>3</RESOURCE_ID>
+    <RESOURCE_TITLE>K Closest Points to Origin</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://leetcode.com/problems/k-closest-points-to-origin/</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>LEETCODE</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>4</RESOURCE_ID>
+    <RESOURCE_TITLE>Rectangle Overlap</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://leetcode.com/problems/rectangle-overlap/description/</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>LEETCODE</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>5</RESOURCE_ID>
+    <RESOURCE_TITLE>Rectangle Area</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://leetcode.com/problems/rectangle-area/</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>LEETCODE</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>6</RESOURCE_ID>
+    <RESOURCE_TITLE>Queries on Number of Points Inside a Circle</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://leetcode.com/problems/queries-on-number-of-points-inside-a-circle/description/</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>LEETCODE</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>7</RESOURCE_ID>
+    <RESOURCE_TITLE>Largest Triangle Area</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://leetcode.com/problems/largest-triangle-area/</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>LEETCODE</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>8</RESOURCE_ID>
+    <RESOURCE_TITLE>Check If It Is a Straight Line</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://leetcode.com/problems/check-if-it-is-a-straight-line/description/</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>LEETCODE</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>9</RESOURCE_ID>
+    <RESOURCE_TITLE>Valid Boomerang</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://leetcode.com/problems/valid-boomerang/description/</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>LEETCODE</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+</EXTERNAL_WIDGET>

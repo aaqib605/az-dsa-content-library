@@ -10,6 +10,16 @@ Now it's time to put your skills to the test. Try solving the following problems
 <RESOURCE_ITEM>
 
     <RESOURCE_ID>1</RESOURCE_ID>
+    <RESOURCE_TITLE>Exponentiation</RESOURCE_TITLE>
+    <RESOURCE_LINK>https://cses.fi/problemset/task/1095</RESOURCE_LINK>
+    <RESOURCE_PLATFORM>OTHER</RESOURCE_PLATFORM>
+    <RESOURCE_DESCRIPTION>Practice problem</RESOURCE_DESCRIPTION>
+
+</RESOURCE_ITEM>
+
+<RESOURCE_ITEM>
+
+    <RESOURCE_ID>2</RESOURCE_ID>
     <RESOURCE_TITLE>Solve The Equation</RESOURCE_TITLE>
     <RESOURCE_LINK>https://maang.in/problems/Solve-the-Equation-73</RESOURCE_LINK>
     <RESOURCE_PLATFORM>OTHER</RESOURCE_PLATFORM>
@@ -19,7 +29,7 @@ Now it's time to put your skills to the test. Try solving the following problems
 
 <RESOURCE_ITEM>
 
-    <RESOURCE_ID>2</RESOURCE_ID>
+    <RESOURCE_ID>3</RESOURCE_ID>
     <RESOURCE_TITLE>Exponentiation AZ101</RESOURCE_TITLE>
     <RESOURCE_LINK>https://maang.in/problems/Exponentiation-AZ101-387</RESOURCE_LINK>
     <RESOURCE_PLATFORM>OTHER</RESOURCE_PLATFORM>
