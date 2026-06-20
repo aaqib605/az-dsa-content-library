@@ -1,6 +1,6 @@
 <VIDEO_WIDGET>
 
-<VIDEO_ID></VIDEO_ID> <!-- Required -->
+<VIDEO_ID>3472</VIDEO_ID> <!-- Required -->
 
 </VIDEO_WIDGET>
 
@@ -8,11 +8,12 @@
 
 # Prime Numbers and Factorization
 
-Prime numbers are the atoms of mathematics. Every single integer in existence is either a prime number itself, or it can be uniquely created by multiplying prime numbers together. 
+Prime numbers are the atoms of mathematics. Every single integer in existence is either a prime number itself, or it can be uniquely created by multiplying prime numbers together.
 
 In computer science, prime numbers form the absolute foundation of cryptography (like RSA algorithms that keep your passwords safe) and hashing.
 
 In this module, we will explore two fundamental problems:
+
 1. **Prime Checking:** Is $N$ a prime number?
 2. **Prime Factorization:** What prime numbers multiply together to create $N$?
 
@@ -22,16 +23,16 @@ In this module, we will explore two fundamental problems:
 
 By definition, a prime number is a number strictly greater than 1 that has **exactly two factors**: $1$ and itself.
 
-If we want to know if $N$ is prime, we just need to see if it has any other divisors. But how far do we need to check? 
+If we want to know if $N$ is prime, we just need to see if it has any other divisors. But how far do we need to check?
 
-In our *Factors and Multiples* module, we learned that factors always exist in pairs, and the largest pair we need to check is bounded by $\sqrt{N}$. If we can't find a factor by the time we reach the square root, we will *never* find one!
+In our _Factors and Multiples_ module, we learned that factors always exist in pairs, and the largest pair we need to check is bounded by $\sqrt{N}$. If we can't find a factor by the time we reach the square root, we will _never_ find one!
 
 ```cpp
 // Time Complexity: O(sqrt(N)) in the worst case
 // Best Case: O(1) if N is divisible by 2 immediately
 bool isPrime(long long N) {
     if (N <= 1) return false; // 0 and 1 are not prime
-    
+
     // We check up to sqrt(N). Using i <= N / i avoids integer overflow.
     for (long long i = 2; i <= N / i; i++) {
         if (N % i == 0) {
@@ -42,27 +43,30 @@ bool isPrime(long long N) {
 }
 ```
 
-> 💡 **CP Insight:** Notice how we start our loop at `2` and return `false` the exact moment we find a divisor. If $N$ is a massive even number like $10^{12}$, the loop runs exactly *once* and stops. This makes our prime checker blazingly fast in the average case!
+> 💡 **CP Insight:** Notice how we start our loop at `2` and return `false` the exact moment we find a divisor. If $N$ is a massive even number like $10^{12}$, the loop runs exactly _once_ and stops. This makes our prime checker blazingly fast in the average case!
 
 ---
 
 ## 2. Prime Factorization
 
-Instead of just checking if a number is prime, what if we want to break it down into its core prime components? 
+Instead of just checking if a number is prime, what if we want to break it down into its core prime components?
 
 ### The Fundamental Theorem of Arithmetic
+
 Any number $N$ can be uniquely represented as the product of prime numbers raised to specific powers:
 
 $$N = P_1^{\alpha_1} \times P_2^{\alpha_2} \times P_3^{\alpha_3} \times \dots$$
 
 Where:
+
 - $P_i$ are distinct prime numbers.
 - $\alpha_i$ are their respective exponents (how many times that prime divides $N$).
 
 For example, if $N = 60$, its prime factorization is $2^2 \times 3^1 \times 5^1$.
 
 ### The Optimal Approach $O(\sqrt{N})$
-We can use the exact same $\sqrt{N}$ trick to factorize. We loop through potential prime factors up to $\sqrt{N}$. If $i$ perfectly divides $N$, we continuously divide $N$ by $i$ to count its exponent $\alpha$. 
+
+We can use the exact same $\sqrt{N}$ trick to factorize. We loop through potential prime factors up to $\sqrt{N}$. If $i$ perfectly divides $N$, we continuously divide $N$ by $i$ to count its exponent $\alpha$.
 
 To represent the formula programmatically, we will store each prime factor and its exponent as a pair (`pair<long long, long long>`).
 
@@ -74,7 +78,7 @@ using namespace std;
 // Time Complexity: O(sqrt(N))
 vector<pair<long long, long long>> primeFactorization(long long N) {
     vector<pair<long long, long long>> factors;
-    
+
     for (long long i = 2; i <= N / i; i++) {
         if (N % i == 0) {
             long long count = 0;
@@ -86,12 +90,12 @@ vector<pair<long long, long long>> primeFactorization(long long N) {
             factors.push_back({i, count});
         }
     }
-    
+
     // If N is still greater than 1, the remaining N is itself a prime!
     if (N > 1) {
         factors.push_back({N, 1});
     }
-    
+
     return factors;
 }
 ```
